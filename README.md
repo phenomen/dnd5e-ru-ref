@@ -1,22 +1,25 @@
-# Справочки D&D 5e на русском языке
+# Справочник по D&D 5e на русском языке
 
 Приложение с краткими правилами Dungeons & Dragons 5e. 
 
-Вебсайт приложения: [https://5e.ruleplaying.com/](https://5e.ruleplaying.com/)
+**Вебсайт:** [https://5e.ruleplaying.com/](https://5e.ruleplaying.com/)
 
-## Установка
+[Svelte](https://svelte.dev/) + [TailwindCSS](https://tailwindcss.com/) = ❤️
+
+
+### Установка
 
 ```bash
 npm install
 ```
 
-## Разработка
+### Разработка
 
 ```bash
 npm run dev
 ```
 
-## Компиляция
+### Компиляция
 
 ```bash
 npm run build
