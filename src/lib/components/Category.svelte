@@ -3,6 +3,7 @@
 	import { DisclosureButton } from '@rgossiaux/svelte-headlessui';
 	import { DisclosurePanel } from '@rgossiaux/svelte-headlessui';
 	import { createEventDispatcher } from 'svelte';
+	import { ChevronRightIcon } from '@rgossiaux/svelte-heroicons/solid';
 
 	const dispatch = createEventDispatcher();
 
@@ -49,11 +50,18 @@
 			class="w-full rounded {categoryColor} p-4 text-white flex items-center text-left"
 			let:open
 		>
-			<h2 class="font-medium mr-2 small-caps">{categoryTitle}</h2>
+			<div class="flex flex-1 items-center ">
+				<h2 class="font-medium mr-2 small-caps flex-0">{categoryTitle}</h2>
 
-			<span class="px-2 rounded text-xs md:text-sm bg-white bg-opacity-20 text-center"
-				>{categorySubtitle}</span
-			>
+				{#if categorySubtitle.length > 0}
+					<span class="px-2 py-1 rounded text-xs md:text-sm bg-white bg-opacity-20 text-center"
+						>{categorySubtitle}
+					</span>
+				{/if}
+			</div>
+			<div class:open>
+				<ChevronRightIcon class="flex-0 h-5 w-5 flex-end" />
+			</div>
 		</DisclosureButton>
 
 		<DisclosurePanel>
