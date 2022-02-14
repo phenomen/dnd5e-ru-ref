@@ -46,7 +46,7 @@
 {:then data}
 	<Disclosure class="my-2">
 		<DisclosureButton
-			class="w-full rounded {categoryColor } p-4 text-white flex items-center text-left"
+			class="w-full rounded {categoryColor} p-4 text-white flex items-center text-left"
 			let:open
 		>
 			<h2 class="font-medium mr-2 small-caps">{categoryTitle}</h2>
@@ -61,7 +61,7 @@
 				<h3 class="mt-4 font-semibold">{block.title}</h3>
 				<p class="pt-0 mt-0">{block.subtitle}</p>
 				<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
-					{#each block.rules.sort(sortBy('title')) as item}
+					{#each block.rules as item}
 						<div
 							class="flex rounded p-2 shadow hover:cursor-pointer hover:shadow-lg"
 							on:click={sendItem(item.title, item.subtitle, item.description, item.reference)}
@@ -70,7 +70,7 @@
 								<img
 									src="icons/{item.icon}.svg"
 									alt={item.title}
-									class="h-14 w-14 rounded {categoryColor } p-1"
+									class="h-14 w-14 rounded {categoryColor} p-1"
 								/>
 							</div>
 							<div>

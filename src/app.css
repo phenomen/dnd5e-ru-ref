@@ -76,6 +76,18 @@ li {
 	@apply bg-gradient-to-br from-emerald-500 to-emerald-700;
 }
 
+.g-teal {
+	@apply bg-gradient-to-br from-teal-500 to-teal-700;
+}
+
+.g-cyan {
+	@apply bg-gradient-to-br from-cyan-500 to-cyan-700;
+}
+
+.g-sky {
+	@apply bg-gradient-to-br from-sky-500 to-sky-700;
+}
+
 .g-blue {
 	@apply bg-gradient-to-br  from-blue-500 to-blue-700;
 }
@@ -84,12 +96,16 @@ li {
 	@apply bg-gradient-to-br from-indigo-500 to-indigo-700;
 }
 
-.g-purple {
-	@apply bg-gradient-to-br from-purple-500 to-purple-700;
+.g-violet {
+	@apply bg-gradient-to-br from-violet-500 to-violet-700;
 }
 
 .g-purple {
 	@apply bg-gradient-to-br from-purple-500 to-purple-700;
+}
+
+.g-fuchsia {
+	@apply bg-gradient-to-br from-fuchsia-500 to-fuchsia-700;
 }
 
 .g-hyper {

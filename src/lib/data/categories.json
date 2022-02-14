@@ -31,11 +31,21 @@
 	{
 		"dataset": "condition",
 		"title": "Состояния",
-		"color": "g-emerald"
+		"color": "g-lime"
 	},
 	{
 		"dataset": "environment",
 		"title": "Окружающая среда и восприятие",
-		"color": "g-lime"
+		"color": "g-green"
+	},
+	{
+		"dataset": "hitpoints",
+		"title": "Хиты, смерть и отдых",
+		"color": "g-emerald"
+	},
+	{
+		"dataset": "damage",
+		"title": "Урон и атака",
+		"color": "g-teal"
 	}
 ]

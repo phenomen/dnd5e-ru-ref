@@ -17,8 +17,12 @@
 	>
 </div>
 
-<div class="text-xs text-gray-400">
-	<a href="https://github.com/Phenomen/dnd5e-ru-ref" target="_blank" class="flex items-center">
+<div class="mt-20 text-xs text-gray-400">
+	<a
+		href="https://github.com/Phenomen/dnd5e-ru-ref"
+		target="_blank"
+		class="flex items-center justify-center"
+	>
 		<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 			<path
 				fill-rule="evenodd"
