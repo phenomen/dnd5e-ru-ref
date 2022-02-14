@@ -64,16 +64,16 @@
 <Category
 	dataset="free-action"
 	categoryTitle="Свободные действия"
-	categorySubtitle=""
 	color="gyellow"
 	on:message={showModal}
 />
 
+<Category dataset="condition" categoryTitle="Состояния" color="gemerald" on:message={showModal} />
+
 <Category
-	dataset="condition"
-	categoryTitle="Состояния"
-	categorySubtitle=""
-	color="gemerald"
+	dataset="environment"
+	categoryTitle="Окружающая среда и восприятие"
+	color="glime"
 	on:message={showModal}
 />
 

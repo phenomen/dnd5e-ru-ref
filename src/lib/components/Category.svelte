@@ -58,8 +58,8 @@
 
 		<DisclosurePanel>
 			{#each data as block}
-				<h3>{block.title}</h3>
-				<p>{block.subtitle}</p>
+				<h3 class="mt-4 font-semibold">{block.title}</h3>
+				<p class="pt-0 mt-0">{block.subtitle}</p>
 				<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
 					{#each block.rules.sort(sortBy('title')) as item}
 						<div
