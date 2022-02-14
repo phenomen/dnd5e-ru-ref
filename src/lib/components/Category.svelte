@@ -8,8 +8,8 @@
 
 	export let categoryTitle = '';
 	export let categorySubtitle = '';
-	export let color = 'gblue';
-	export let dataset;
+	export let categoryColor = 'gblue';
+	export let categoryDataset;
 
 	function sendItem(title, subtitle, description, reference) {
 		dispatch('message', {
@@ -25,7 +25,7 @@
 	};
 </script>
 
-{#await fetch(`data/${dataset}.json`).then((res) => res.json())}
+{#await fetch(`data/${categoryDataset}.json`).then((res) => res.json())}
 	<div
 		class="my-2 w-full rounded bg-gray-100 p-4 text-left font-medium text-gray-400 flex items-center"
 	>
@@ -46,7 +46,7 @@
 {:then data}
 	<Disclosure class="my-2">
 		<DisclosureButton
-			class="w-full rounded {color} p-4 text-white flex items-center text-left"
+			class="w-full rounded {categoryColor } p-4 text-white flex items-center text-left"
 			let:open
 		>
 			<h2 class="font-medium mr-2 small-caps">{categoryTitle}</h2>
@@ -70,7 +70,7 @@
 								<img
 									src="icons/{item.icon}.svg"
 									alt={item.title}
-									class="h-14 w-14 rounded {color} p-1"
+									class="h-14 w-14 rounded {categoryColor } p-1"
 								/>
 							</div>
 							<div>

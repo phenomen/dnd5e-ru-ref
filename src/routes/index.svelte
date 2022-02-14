@@ -8,6 +8,8 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Category from '$lib/components/Category.svelte';
 
+	import categories from '$lib/data/categories.json';
+
 	let modalOpen = false;
 	let modalTitle = '';
 	let modalSubtitle = '';
@@ -24,58 +26,20 @@
 </script>
 
 <svelte:head>
-	<title>D&D5e | Справочник на русском языке</title>
+	<title>D&D 5e | Справочник на русском языке</title>
 </svelte:head>
 
 <Header />
 
-<Category
-	dataset="movement"
-	categoryTitle="Движение"
-	categorySubtitle="ограничено скоростью"
-	color="gblue"
-	on:message={showModal}
-/>
-
-<Category
-	dataset="action"
-	categoryTitle="Действия"
-	categorySubtitle="1 за ход"
-	color="gred"
-	on:message={showModal}
-/>
-
-<Category
-	dataset="bonus-action"
-	categoryTitle="Бонусные действия"
-	categorySubtitle="максимум 1 за ход"
-	color="gorange"
-	on:message={showModal}
-/>
-
-<Category
-	dataset="reaction"
-	categoryTitle="Реакции"
-	categorySubtitle="1 до вашего следующего хода"
-	color="gamber"
-	on:message={showModal}
-/>
-
-<Category
-	dataset="free-action"
-	categoryTitle="Свободные действия"
-	color="gyellow"
-	on:message={showModal}
-/>
-
-<Category dataset="condition" categoryTitle="Состояния" color="gemerald" on:message={showModal} />
-
-<Category
-	dataset="environment"
-	categoryTitle="Окружающая среда и восприятие"
-	color="glime"
-	on:message={showModal}
-/>
+{#each categories as category}
+	<Category
+		categoryDataset={category.dataset}
+		categoryTitle={category.title}
+		categorySubtitle={category.subtitle}
+		categoryColor={category.color}
+		on:message={showModal}
+	/>
+{/each}
 
 <Dialog class="fixed inset-0 z-10 overflow-y-auto" open={modalOpen}>
 	<div class="min-h-screen px-2 text-center">

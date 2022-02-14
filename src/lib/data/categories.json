@@ -1,0 +1,41 @@
+[
+	{
+		"dataset": "movement",
+		"title": "Движение",
+		"subtitle": "ограничено скоростью",
+		"color": "gblue"
+	},
+	{
+		"dataset": "action",
+		"title": "Действия",
+		"subtitle": "1 за ход",
+		"color": "gred"
+	},
+	{
+		"dataset": "bonus-action",
+		"title": "Бонусные действия",
+		"subtitle": "максимум 1 за ход",
+		"color": "gorange"
+	},
+	{
+		"dataset": "reaction",
+		"title": "Реакции",
+		"subtitle": "1 до вашего следующего хода",
+		"color": "gamber"
+	},
+	{
+		"dataset": "free-action",
+		"title": "Свободные действия",
+		"color": "gyellow"
+	},
+	{
+		"dataset": "condition",
+		"title": "Состояния",
+		"color": "gemerald"
+	},
+	{
+		"dataset": "environment",
+		"title": "Окружающая среда и восприятие",
+		"color": "glime"
+	}
+]
