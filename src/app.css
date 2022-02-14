@@ -40,70 +40,70 @@ li {
 
 /* GRADIENTS */
 
-.ggray {
+.g-gray {
 	@apply bg-gradient-to-br  from-gray-500 to-gray-700;
 }
 
-.gstone {
+.g-stone {
 	@apply bg-gradient-to-br  from-stone-500 to-stone-700;
 }
 
-.gred {
+.g-red {
 	@apply bg-gradient-to-br from-red-500 to-red-700;
 }
 
-.gorange {
+.g-orange {
 	@apply bg-gradient-to-br from-orange-500 to-orange-700;
 }
 
-.gamber {
+.g-amber {
 	@apply bg-gradient-to-br from-amber-500 to-amber-700;
 }
 
-.gyellow {
+.g-yellow {
 	@apply bg-gradient-to-br from-yellow-500 to-yellow-700;
 }
 
-.glime {
+.g-lime {
 	@apply bg-gradient-to-br from-lime-500 to-lime-700;
 }
 
-.ggreen {
+.g-green {
 	@apply bg-gradient-to-br from-green-500 to-green-700;
 }
 
-.gemerald {
+.g-emerald {
 	@apply bg-gradient-to-br from-emerald-500 to-emerald-700;
 }
 
-.gblue {
+.g-blue {
 	@apply bg-gradient-to-br  from-blue-500 to-blue-700;
 }
 
-.gindigo {
+.g-indigo {
 	@apply bg-gradient-to-br from-indigo-500 to-indigo-700;
 }
 
-.gpurple {
+.g-purple {
 	@apply bg-gradient-to-br from-purple-500 to-purple-700;
 }
 
-.gpurple {
+.g-purple {
 	@apply bg-gradient-to-br from-purple-500 to-purple-700;
 }
 
-.ghyper {
+.g-hyper {
 	@apply bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500;
 }
 
-.goceanic {
+.g-oceanic {
 	@apply bg-gradient-to-br from-green-300 via-blue-500 to-purple-700;
 }
 
-.gcottoncandy {
+.g-cottoncandy {
 	@apply bg-gradient-to-tl from-pink-300 via-purple-300 to-indigo-400;
 }
 
-.gsunset {
+.g-sunset {
 	@apply bg-gradient-to-br from-indigo-200 via-red-200 to-yellow-100;
 }
