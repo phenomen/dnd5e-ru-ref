@@ -83,7 +83,11 @@
 							</div>
 							<div>
 								<h4 class="font-medium">{item.title}</h4>
-								<span class="mt-1 text-sm">{item.subtitle}</span>
+								{#if item.subtitle}
+									<span class="mt-1 text-sm">
+										{item.subtitle}
+									</span>
+								{/if}
 							</div>
 						</div>
 					{/each}

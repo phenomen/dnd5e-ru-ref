@@ -53,7 +53,9 @@
 					<h2 class="text-lg font-medium">{modalTitle}</h2>
 					<span class="badge-gray">{modalReference}</span>
 				</div>
-				<span class="my-2 text-sm text-gray-600">{modalSubtitle}</span>
+				{#if modalSubtitle}
+					<span class="my-2 text-sm text-gray-600">{modalSubtitle}</span>
+				{/if}
 			</DialogTitle>
 
 			<DialogDescription class="mt-4 text-base">
