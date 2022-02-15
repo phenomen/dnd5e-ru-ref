@@ -41,9 +41,11 @@
 	/>
 {/each}
 
-<Dialog class="fixed inset-0 z-10 overflow-y-auto" open={modalOpen}>
-	<div class="min-h-screen px-2 text-center">
-		<DialogOverlay class="fixed inset-0 bg-black opacity-20" on:click={() => (modalOpen = false)} />
+<Footer />
+
+<Dialog class="fixed inset-0 z-10" open={modalOpen}>
+	<div class="min-h-screen min-w-full text-center">
+		<DialogOverlay class="fixed inset-0 bg-black opacity-30" on:click={() => (modalOpen = false)} />
 
 		<div
 			class="my-4 inline-block w-full max-w-xl transform overflow-hidden rounded bg-white p-4 text-left align-middle shadow-xl"
@@ -74,5 +76,3 @@
 		</div>
 	</div>
 </Dialog>
-
-<Footer />
