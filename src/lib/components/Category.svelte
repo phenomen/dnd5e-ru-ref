@@ -28,10 +28,10 @@
 
 {#await fetch(`data/${categoryDataset}.json`).then((res) => res.json())}
 	<div
-		class="my-2 w-full rounded bg-gray-100 p-4 text-left font-medium text-gray-400 flex items-center"
+		class="my-2 w-full rounded bg-slate-100 p-4 text-left font-medium text-slate-400 flex items-center"
 	>
 		<svg
-			class="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-400"
+			class="animate-spin -ml-1 mr-3 h-5 w-5 text-slate-400"
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
 			viewBox="0 0 24 24"
@@ -66,9 +66,9 @@
 
 		<DisclosurePanel>
 			{#each data as block}
-				<h3 class="mt-4 font-semibold">{block.title}</h3>
-				<p class="pt-0 mt-0">{block.subtitle}</p>
-				<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+				<h3 class="mt-4 font-semibold dark:text-slate-100">{block.title}</h3>
+				<p class="pt-0 mt-0 dark:text-slate-100">{block.subtitle}</p>
+				<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
 					{#each block.rules as item}
 						<div
 							class="flex rounded p-2 shadow hover:cursor-pointer hover:shadow-lg"

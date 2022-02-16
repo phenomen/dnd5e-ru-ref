@@ -2,8 +2,10 @@
 	import { CodeIcon } from '@rgossiaux/svelte-heroicons/solid';
 </script>
 
-<div class="my-8 flex w-full space-x-2 rounded bg-gray-100 p-4 text-xs md:text-sm">
-	<h4 class="text-gray-600">Полезные сообщества:</h4>
+<div
+	class="my-8 flex w-full space-x-2 rounded bg-slate-100 p-4 text-xs dark:bg-slate-800 md:text-sm"
+>
+	<h4 class="text-slate-600 dark:text-slate-300">Полезные сообщества:</h4>
 	<a
 		class="text-blue-500 underline hover:text-blue-300"
 		href="https://discord.gg/Z2CXFy35WF"
@@ -21,7 +23,7 @@
 	>
 </div>
 
-<div class="mt-20 text-xs text-gray-400">
+<div class="mt-20 text-xs text-slate-400">
 	<a
 		href="https://github.com/Phenomen/dnd5e-ru-ref"
 		target="_blank"

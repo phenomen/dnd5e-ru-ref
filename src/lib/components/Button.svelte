@@ -18,7 +18,7 @@
 		@apply bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500;
 	}
 	.secondary {
-		@apply border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-indigo-500;
+		@apply border-slate-300 bg-white text-slate-700 hover:bg-slate-50 focus:ring-indigo-500;
 	}
 	.rounded {
 		@apply rounded-full;
