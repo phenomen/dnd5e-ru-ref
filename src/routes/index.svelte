@@ -4,8 +4,7 @@
 	import { DialogTitle } from '@rgossiaux/svelte-headlessui';
 	import { DialogDescription } from '@rgossiaux/svelte-headlessui';
 
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+
 	import Category from '$lib/components/Category.svelte';
 
 	import categories from '$lib/data/categories.json';
@@ -29,8 +28,6 @@
 	<title>D&D 5e | Справочник на русском языке</title>
 </svelte:head>
 
-<Header />
-
 {#each categories as category}
 	<Category
 		categoryDataset={category.dataset}
@@ -41,14 +38,12 @@
 	/>
 {/each}
 
-<Footer />
-
 <Dialog class="fixed inset-0 z-10" open={modalOpen}>
 	<div class="min-h-screen min-w-full text-center">
 		<DialogOverlay class="fixed inset-0 bg-black opacity-30" on:click={() => (modalOpen = false)} />
 
 		<div
-			class="my-4 inline-block w-full max-w-xl transform overflow-hidden rounded bg-white p-4 text-left align-middle shadow-xl"
+			class="my-4 md:my-8 inline-block w-full max-w-xl transform overflow-hidden rounded bg-white p-4 text-left align-middle shadow-xl"
 		>
 			<DialogTitle class="mb-2">
 				<div class="flex space-x-2">

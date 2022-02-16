@@ -1,9 +1,11 @@
 <script>
 	import '../app.css';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<div class="mx-auto max-w-7xl bg-white sm:px-6 lg:px-8">
-	<div class="p-2">
-		<slot />
-	</div>
+<div class="mx-auto max-w-7xl bg-white p-2 sm:p-4 lg:p-6">
+	<Header />
+	<slot />
+	<Footer />
 </div>
