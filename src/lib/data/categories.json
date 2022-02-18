@@ -47,5 +47,10 @@
 		"dataset": "damage",
 		"title": "Урон и атака",
 		"color": "g-teal"
+	},
+	{
+		"dataset": "abilities",
+		"title": "Характеристики и навыки",
+		"color": "g-cyan"
 	}
 ]
