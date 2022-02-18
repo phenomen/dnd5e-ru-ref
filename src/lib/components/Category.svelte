@@ -1,7 +1,5 @@
 <script>
-	import { Disclosure } from '@rgossiaux/svelte-headlessui';
-	import { DisclosureButton } from '@rgossiaux/svelte-headlessui';
-	import { DisclosurePanel } from '@rgossiaux/svelte-headlessui';
+	import { Disclosure, DisclosureButton, DisclosurePanel } from '@rgossiaux/svelte-headlessui';
 	import { createEventDispatcher } from 'svelte';
 	import { ChevronRightIcon } from '@rgossiaux/svelte-heroicons/solid';
 

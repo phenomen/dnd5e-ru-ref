@@ -1,11 +1,11 @@
 <script>
-	import { Dialog } from '@rgossiaux/svelte-headlessui';
-	import { DialogOverlay } from '@rgossiaux/svelte-headlessui';
-	import { DialogTitle } from '@rgossiaux/svelte-headlessui';
-	import { DialogDescription } from '@rgossiaux/svelte-headlessui';
-
+	import {
+		Dialog,
+		DialogOverlay,
+		DialogTitle,
+		DialogDescription
+	} from '@rgossiaux/svelte-headlessui';
 	import Category from '$lib/components/Category.svelte';
-
 	import categories from '$lib/data/categories.json';
 
 	let modalOpen = false;
