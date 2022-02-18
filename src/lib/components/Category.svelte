@@ -66,7 +66,7 @@
 			{#each data as block}
 				<h3 class="mt-4 font-semibold dark:text-slate-100">{block.title}</h3>
 				<p class="pt-0 mt-0 dark:text-slate-100">{block.subtitle}</p>
-				<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
+				<div class="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
 					{#each block.rules as item}
 						<div
 							class="flex rounded p-2 shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-gray-200"

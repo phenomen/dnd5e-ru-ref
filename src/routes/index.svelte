@@ -38,16 +38,19 @@
 {/each}
 
 <Dialog class="fixed inset-0 z-10 overflow-y-auto" open={modalOpen}>
-	<div class="min-h-screen px-2 text-center">
+	<div class="flex min-h-screen items-center justify-center">
 		<DialogOverlay class="fixed inset-0 bg-black opacity-30" on:click={() => (modalOpen = false)} />
 
 		<div
-			class="my-4 inline-block w-full max-w-xl transform overflow-hidden rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-900"
+			class="my-4 inline-block w-full max-w-2xl transform rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-800"
 		>
 			<DialogTitle class="mb-2">
 				<div class="flex space-x-2">
 					<h2 class="text-lg font-medium dark:text-slate-100">{modalTitle}</h2>
-					<span class="badge-slate dark:bg-slate-800 dark:text-slate-100">{modalReference}</span>
+					<span
+						class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"
+						>{modalReference}</span
+					>
 				</div>
 				{#if modalSubtitle}
 					<span class="my-2 text-sm text-slate-600 dark:text-slate-300">{modalSubtitle}</span>
@@ -61,7 +64,7 @@
 			<div class="mt-4">
 				<button
 					type="button"
-					class="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-100 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
+					class="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-100 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
 					on:click={() => (modalOpen = false)}
 				>
 					Закрыть
