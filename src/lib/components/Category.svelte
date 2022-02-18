@@ -71,7 +71,7 @@
 				<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
 					{#each block.rules as item}
 						<div
-							class="flex rounded p-2 shadow hover:cursor-pointer hover:shadow-lg"
+							class="flex rounded p-2 shadow hover:cursor-pointer hover:shadow-lg dark:bg-slate-800 bg-white"
 							on:click={sendItem(item.title, item.subtitle, item.description, item.reference)}
 						>
 							<div class="mr-2 flex-shrink-0">
