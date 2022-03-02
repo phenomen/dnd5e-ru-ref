@@ -53,7 +53,6 @@
 		"title": "Характеристики и навыки",
 		"color": "g-cyan"
 	},
-
 	{
 		"dataset": "travel",
 		"title": "Путешествие",
@@ -63,5 +62,10 @@
 		"dataset": "language",
 		"title": "Языки",
 		"color": "g-purple"
+	},
+	{
+		"dataset": "xp",
+		"title": "Опыт",
+		"color": "g-fuchsia"
 	}
 ]
