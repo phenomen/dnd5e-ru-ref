@@ -52,5 +52,16 @@
 		"dataset": "abilities",
 		"title": "Характеристики и навыки",
 		"color": "g-cyan"
+	},
+
+	{
+		"dataset": "travel",
+		"title": "Путешествие",
+		"color": "g-violet"
+	},
+	{
+		"dataset": "language",
+		"title": "Языки",
+		"color": "g-purple"
 	}
 ]
