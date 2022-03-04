@@ -3,7 +3,7 @@
 		"dataset": "movement",
 		"title": "Движение",
 		"subtitle": "ограничено скоростью",
-		"color": "g-blue"
+		"color": "g-stone"
 	},
 	{
 		"dataset": "action",
@@ -54,8 +54,23 @@
 		"color": "g-cyan"
 	},
 	{
+		"dataset": "equipment",
+		"title": "Инструменты и оружие",
+		"color": "g-sky"
+	},
+	{
+		"dataset": "spellcasting",
+		"title": "Заклинания",
+		"color": "g-blue"
+	},
+	{
 		"dataset": "travel",
 		"title": "Путешествие",
+		"color": "g-indigo"
+	},
+	{
+		"dataset": "multiclassing",
+		"title": "Мультиклассирование",
 		"color": "g-violet"
 	},
 	{

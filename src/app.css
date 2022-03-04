@@ -6,12 +6,16 @@ p {
 	@apply my-4;
 }
 
+h4 {
+	@apply mt-4 text-lg font-semibold;
+}
+
 blockquote {
 	@apply flex w-full rounded bg-slate-100 p-2 font-serif text-slate-700 dark:bg-slate-800 dark:text-slate-100;
 }
 
 table {
-	@apply min-w-full;
+	@apply my-2 min-w-full;
 }
 
 thead {
@@ -23,7 +27,7 @@ th {
 }
 
 td {
-	@apply border-t border-slate-200 px-6 py-4 text-sm dark:border-slate-700;
+	@apply border-t border-slate-200 px-6 py-3 text-sm dark:border-slate-700;
 }
 
 li {

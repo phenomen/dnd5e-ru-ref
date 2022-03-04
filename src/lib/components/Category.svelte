@@ -64,7 +64,7 @@
 
 		<DisclosurePanel>
 			{#each data as block}
-				<h3 class="mt-4 font-semibold dark:text-slate-100">{block.title}</h3>
+				<h2 class="mt-4 font-semibold dark:text-slate-100">{block.title}</h2>
 				<p class="pt-0 mt-0 dark:text-slate-100">{block.subtitle}</p>
 				<div class="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
 					{#each block.rules as item}
@@ -80,7 +80,7 @@
 								/>
 							</div>
 							<div>
-								<h4 class="font-medium">{item.title}</h4>
+								<h3 class="font-medium">{item.title}</h3>
 								{#if item.subtitle}
 									<span class="mt-1 text-sm">
 										{item.subtitle}
