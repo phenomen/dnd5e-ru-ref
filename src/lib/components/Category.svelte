@@ -26,7 +26,7 @@
 
 {#await fetch(`data/${categoryDataset}.json`).then((res) => res.json())}
 	<div
-		class="my-2 w-full rounded bg-slate-100 p-4 text-left font-medium text-slate-400 flex items-center"
+		class="my-2 w-full rounded bg-slate-100 dark:bg-slate-800 p-4 text-left font-medium text-slate-400 flex items-center"
 	>
 		<svg
 			class="animate-spin -ml-1 mr-3 h-5 w-5 text-slate-400"
