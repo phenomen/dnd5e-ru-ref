@@ -64,7 +64,7 @@
 			<div class="mt-4">
 				<button
 					type="button"
-					class="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-100 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
+					class="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-200 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
 					on:click={() => (modalOpen = false)}
 				>
 					Закрыть

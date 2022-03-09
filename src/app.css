@@ -30,8 +30,8 @@ td {
 	@apply border-t border-slate-200 px-6 py-3 text-sm dark:border-slate-700;
 }
 
-li {
-	@apply mb-2;
+ul {
+	@apply list-disc space-y-1 pl-4;
 }
 
 .open {
