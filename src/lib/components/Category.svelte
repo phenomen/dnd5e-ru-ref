@@ -1,7 +1,8 @@
 <script>
 	import { Disclosure, DisclosureButton, DisclosurePanel } from '@rgossiaux/svelte-headlessui';
-	import { createEventDispatcher } from 'svelte';
 	import { ChevronRightIcon } from '@rgossiaux/svelte-heroicons/solid';
+
+	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
 
@@ -25,15 +26,8 @@
 </script>
 
 {#await fetch(`data/${categoryDataset}.json`).then((res) => res.json())}
-	<div
-		class="my-2 w-full rounded bg-slate-100 dark:bg-slate-800 p-4 text-left font-medium text-slate-400 flex items-center"
-	>
-		<svg
-			class="animate-spin -ml-1 mr-3 h-5 w-5 text-slate-400"
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-		>
+	<div class="my-2 w-full rounded bg-slate-100 dark:bg-slate-800 p-4 text-left font-medium text-slate-400 flex items-center">
+		<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
 			<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
 			<path
 				class="opacity-75"
@@ -44,17 +38,12 @@
 	</div>
 {:then data}
 	<Disclosure class="my-2">
-		<DisclosureButton
-			class="w-full rounded {categoryColor} p-4 text-white flex items-center text-left"
-			let:open
-		>
+		<DisclosureButton class="w-full rounded {categoryColor} p-4 text-white flex items-center text-left" let:open>
 			<div class="flex flex-1 items-center ">
 				<h2 class="font-medium mr-2 small-caps flex-0">{categoryTitle}</h2>
 
 				{#if categorySubtitle.length > 0}
-					<span class="px-2 py-1 rounded text-xs md:text-sm bg-white bg-opacity-20 text-center"
-						>{categorySubtitle}
-					</span>
+					<span class="px-2 py-1 rounded text-xs md:text-sm bg-white bg-opacity-20 text-center">{categorySubtitle} </span>
 				{/if}
 			</div>
 			<div class:open>
@@ -73,11 +62,7 @@
 							on:click={sendItem(item.title, item.subtitle, item.description, item.reference)}
 						>
 							<div class="mr-2 flex-shrink-0">
-								<img
-									src="icons/{item.icon}.svg"
-									alt={item.title}
-									class="h-14 w-14 rounded {categoryColor} p-1"
-								/>
+								<img src="icons/{item.icon}.svg" alt={item.title} class="h-14 w-14 rounded {categoryColor} p-1" />
 							</div>
 							<div>
 								<h3 class="font-medium">{item.title}</h3>

@@ -1,14 +1,11 @@
 <script>
-	import {
-		Dialog,
-		DialogOverlay,
-		DialogTitle,
-		DialogDescription
-	} from '@rgossiaux/svelte-headlessui';
 	import Category from '$lib/components/Category.svelte';
 	import categories from '$lib/data/categories.json';
 
+	import { Dialog, DialogOverlay, DialogTitle, DialogDescription } from '@rgossiaux/svelte-headlessui';
+
 	let modalOpen = false;
+	let modalScroll = null;
 	let modalTitle = '';
 	let modalSubtitle = '';
 	let modalDescription = '';
@@ -37,14 +34,17 @@
 	/>
 {/each}
 
-<Dialog class="fixed inset-0 z-10 overflow-y-auto" open={modalOpen}>
-	<div class="flex min-h-screen items-center justify-center">
+<Dialog
+	class="fixed inset-0 z-10 min-h-screen overflow-y-auto"
+	open={modalOpen}
+	on:close={() => (modalOpen = false)}
+	initialFocus={modalScroll}
+>
+	<div class="flex items-center justify-center">
 		<DialogOverlay class="fixed inset-0 bg-black opacity-30" on:click={() => (modalOpen = false)} />
 
-		<div
-			class="my-4 inline-block w-full max-w-2xl transform rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-800"
-		>
-			<DialogTitle class="mb-2">
+		<div class="my-4 inline-block w-full max-w-2xl transform rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-800">
+			<DialogTitle class="mb-2" bind:this={modalScroll}>
 				<div class="flex space-x-2">
 					<h2 class="text-lg font-medium dark:text-slate-100">{modalTitle}</h2>
 					<span
