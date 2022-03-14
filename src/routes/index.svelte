@@ -40,10 +40,10 @@
 	on:close={() => (modalOpen = false)}
 	initialFocus={modalScroll}
 >
-	<div class="flex items-center justify-center">
+	<div class="flex min-h-screen items-center justify-center">
 		<DialogOverlay class="fixed inset-0 bg-black opacity-30" on:click={() => (modalOpen = false)} />
 
-		<div class="my-4 inline-block w-full max-w-2xl transform rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-800">
+		<div class="m-0 inline-block w-full max-w-2xl transform rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-800 md:m-4">
 			<DialogTitle class="mb-2" bind:this={modalScroll}>
 				<div class="flex space-x-2">
 					<h2 class="text-lg font-medium dark:text-slate-100">{modalTitle}</h2>
