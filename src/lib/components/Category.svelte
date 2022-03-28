@@ -58,11 +58,11 @@
 				<div class="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
 					{#each block.rules as item}
 						<div
-							class="flex rounded p-2 shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-gray-200"
+							class="flex rounded p-2 shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-gray-200 "
 							on:click={sendItem(item.title, item.subtitle, item.description, item.reference)}
 						>
 							<div class="mr-2 flex-shrink-0">
-								<img src="icons/{item.icon}.svg" alt={item.title} class="h-14 w-14 rounded {categoryColor} p-1" />
+								<img src="icons/{item.icon}.svg" alt={item.title} class="h-14 w-14 p-1 {categoryColor} rounded" />
 							</div>
 							<div>
 								<h3 class="font-medium">{item.title}</h3>
