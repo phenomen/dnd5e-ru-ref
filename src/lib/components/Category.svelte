@@ -59,7 +59,7 @@
 					{#each block.rules as item}
 						<div
 							class="flex rounded p-2 shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-gray-200 "
-							on:click={sendItem(item.title, item.subtitle, item.description, item.reference)}
+							on:click={() => sendItem(item.title, item.subtitle, item.description, item.reference)}
 						>
 							<div class="mr-2 flex-shrink-0">
 								<img src="icons/{item.icon}.svg" alt={item.title} class="h-14 w-14 p-1 {categoryColor} rounded" />

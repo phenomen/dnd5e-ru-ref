@@ -27,9 +27,9 @@
 	<h1 class="flex-1 text-sm font-bold uppercase ">D&D 5e - Справочник на русском языке</h1>
 	<div class="cursor-pointer">
 		{#if $dark}
-			<SunIcon class="h-6 w-6" on:click={switchTheme} />
+			<SunIcon class="h-6 w-6" on:click={() => switchTheme} />
 		{:else}
-			<MoonIcon class="h-6 w-6" on:click={switchTheme} />
+			<MoonIcon class="h-6 w-6" on:click={() => switchTheme} />
 		{/if}
 	</div>
 </div>
