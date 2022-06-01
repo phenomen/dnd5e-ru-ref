@@ -48,8 +48,8 @@
 		<DialogOverlay class="fixed inset-0 bg-black opacity-30" on:click={() => (modalOpen = false)} />
 
 		<div class="m-0 inline-block w-full max-w-2xl transform rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-800 md:m-4">
-			<DialogTitle class="mb-2" bind:this={modalScroll}>
-				<div class="flex space-x-2">
+			<DialogTitle class="mb-2">
+				<div class="flex space-x-2" bind:this={modalScroll}>
 					<h2 class="text-lg font-medium dark:text-slate-100">{modalTitle}</h2>
 					<span
 						class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"

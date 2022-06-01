@@ -1,6 +1,6 @@
 {
 	"name": "dnd5e-quickref-ru",
-	"version": "2.0",
+	"version": "2.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -11,18 +11,18 @@
 	},
 	"devDependencies": {
 		"@babichjacob/svelte-localstorage": "0.2.0",
-		"@rgossiaux/svelte-headlessui": "^1.0.1",
+		"@rgossiaux/svelte-headlessui": "^1.0.2",
 		"@rgossiaux/svelte-heroicons": "^0.1.2",
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "next",
+		"@sveltejs/adapter-netlify": "1.0.0-next.64",
+		"@sveltejs/kit": "1.0.0-next.347",
 		"autoprefixer": "^10.4.7",
-		"cssnano": "^5.1.9",
-		"postcss-load-config": "3.1.4",
+		"cssnano": "^5.1.10",
 		"postcss": "^8.4.14",
-		"prettier-plugin-tailwindcss": "^0.1.11",
+		"postcss-load-config": "3.1.4",
 		"prettier": "^2.6.2",
-		"svelte-preprocess": "^4.10.6",
+		"prettier-plugin-tailwindcss": "^0.1.11",
 		"svelte": "^3.48.0",
+		"svelte-preprocess": "^4.10.6",
 		"tailwindcss": "^3.0.24"
 	},
 	"type": "module"
