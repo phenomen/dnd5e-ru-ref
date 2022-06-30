@@ -5,6 +5,9 @@ import adapter from '@sveltejs/adapter-netlify';
 const config = {
 	kit: {
 		adapter: adapter(),
+		prerender: {
+			default: true
+		},
 		vite: {
 			optimizeDeps: {
 				exclude: ['@babichjacob/svelte-localstorage']

@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <script>
 	import Category from '$lib/components/Category.svelte';
 	import categories from '$lib/data/categories.json';
