@@ -2,14 +2,14 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	darkMode: 'class',
+	darkMode: ['class', '[data-theme="dark"]'],
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Inter var', ...defaultTheme.fontFamily.sans]
-			}
-		}
-	}
+				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+			},
+		},
+	},
 };
 
 module.exports = config;

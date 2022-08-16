@@ -1,5 +1,5 @@
 <script>
-	import { CodeIcon } from '@rgossiaux/svelte-heroicons/solid';
+	import { IconCode } from '$lib/components/icons';
 </script>
 
 <div class="my-8 flex w-full space-x-2 rounded bg-slate-100 p-4 text-xs dark:bg-slate-800 md:text-sm">
@@ -12,7 +12,7 @@
 
 <div class="mt-20 text-xs text-slate-400">
 	<a href="https://github.com/Phenomen/dnd5e-ru-ref" target="_blank" class="flex items-center justify-center">
-		<CodeIcon class="h-5 w-5" />
+		<span class="h-5 w-5"><IconCode /></span>
 
 		<span class="ml-1 font-medium hover:underline">open source by phenomen#1337</span>
 	</a>

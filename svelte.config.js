@@ -6,23 +6,15 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
-			default: true
+			default: true,
 		},
-		vite: {
-			optimizeDeps: {
-				exclude: ['@babichjacob/svelte-localstorage']
-			},
-			ssr: {
-				noExternal: ['@babichjacob/svelte-localstorage']
-			}
-		}
 	},
 
 	preprocess: [
 		preprocess({
-			postcss: true
-		})
-	]
+			postcss: true,
+		}),
+	],
 };
 
 export default config;

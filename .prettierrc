@@ -1,6 +1,10 @@
 {
 	"useTabs": true,
+	"printWidth": 140,
+	"tabWidth": 4,
+	"semi": true,
+	"trailingComma": "all",
+	"htmlWhitespaceSensitivity": "css",
 	"singleQuote": true,
-	"trailingComma": "none",
-	"printWidth": 140
+	"singleAttributePerLine": true
 }

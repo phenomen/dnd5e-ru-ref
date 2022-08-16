@@ -1,6 +1,6 @@
 <script>
 	import { Disclosure, DisclosureButton, DisclosurePanel } from '@rgossiaux/svelte-headlessui';
-	import { ChevronRightIcon } from '@rgossiaux/svelte-heroicons/solid';
+	import { IconChevronRight } from '$lib/components/icons';
 
 	import { createEventDispatcher } from 'svelte';
 
@@ -16,7 +16,7 @@
 			title: title,
 			subtitle: subtitle,
 			description: description,
-			reference: reference
+			reference: reference,
 		});
 	}
 
@@ -46,8 +46,8 @@
 					<span class="px-2 py-1 rounded text-xs md:text-sm bg-white bg-opacity-20 text-center">{categorySubtitle} </span>
 				{/if}
 			</div>
-			<div class:open>
-				<ChevronRightIcon class="flex-0 h-5 w-5 flex-end" />
+			<div class:open class="flex-0 h-5 w-5 flex-end">
+				<IconChevronRight />
 			</div>
 		</DisclosureButton>
 
@@ -58,7 +58,7 @@
 				<div class="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
 					{#each block.rules as item}
 						<div
-							class="flex rounded p-2 shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-gray-200 "
+							class="flex rounded p-2 shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-gray-100 "
 							on:click={() => sendItem(item.title, item.subtitle, item.description, item.reference)}
 						>
 							<div class="mr-2 flex-shrink-0">
