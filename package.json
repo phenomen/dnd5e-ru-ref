@@ -10,17 +10,17 @@
 	},
 	"devDependencies": {
 		"@rgossiaux/svelte-headlessui": "^1.0.2",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.71",
-		"@sveltejs/kit": "^1.0.0-next.411",
-		"autoprefixer": "^10.4.8",
+		"@sveltejs/adapter-netlify": "^1.0.0-next.78",
+		"@sveltejs/kit": "^1.0.0-next.503",
+		"autoprefixer": "^10.4.12",
 		"postcss": "^8.4.16",
 		"postcss-load-config": "4.0.1",
 		"prettier": "^2.7.1",
 		"prettier-plugin-tailwindcss": "^0.1.13",
-		"svelte": "^3.49.0",
+		"svelte": "^3.50.1",
 		"svelte-preprocess": "^4.10.7",
 		"tailwindcss": "^3.1.8",
-		"svu": "^0.1.5"
+		"svu": "^0.2.1"
 	},
 	"type": "module"
 }

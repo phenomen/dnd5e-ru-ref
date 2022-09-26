@@ -22,6 +22,7 @@
 
 <svelte:head>
 	<title>D&D 5e | Справочник на русском языке</title>
+	<meta name="description" content="Краткая справка по основным правилам Dungeons & Dragons 5e" />
 </svelte:head>
 
 {#each categories as category}
