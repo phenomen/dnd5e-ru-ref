@@ -16,10 +16,7 @@
 
 <div class="my-4 flex space-x-2 dark:text-slate-100">
 	<h1 class="flex-1 text-sm font-bold uppercase ">D&D 5e - Справочник на русском языке</h1>
-	<button
-		class="flex cursor-pointer place-items-center"
-		on:click={() => themeToggle()}
-	>
+	<button class="flex cursor-pointer place-items-center" on:click={() => themeToggle()}>
 		{#if theme === 'dark'}
 			<span class="h-6 w-6 text-yellow-400"><IconSun /></span>
 		{:else}

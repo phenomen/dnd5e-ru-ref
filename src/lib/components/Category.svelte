@@ -31,10 +31,7 @@
 	</div>
 {:then data}
 	<Disclosure class="my-2">
-		<DisclosureButton
-			class="w-full rounded {categoryColor} p-4 text-white flex items-center text-left"
-			let:open
-		>
+		<DisclosureButton class="w-full rounded {categoryColor} p-4 text-white flex items-center text-left" let:open>
 			<div class="flex flex-1 items-center ">
 				<h2 class="font-medium mr-2 small-caps flex-0">{categoryTitle}</h2>
 
@@ -42,10 +39,7 @@
 					<span class="px-2 py-1 rounded text-xs md:text-sm bg-white bg-opacity-20 text-center">{categorySubtitle} </span>
 				{/if}
 			</div>
-			<div
-				class:open
-				class="flex-0 h-5 w-5 flex-end"
-			>
+			<div class:open class="flex-0 h-5 w-5 flex-end">
 				<IconChevronRight />
 			</div>
 		</DisclosureButton>
@@ -61,11 +55,7 @@
 							on:click={() => sendItem(item.title, item.subtitle, item.description, item.reference)}
 						>
 							<div class="mr-2 flex-shrink-0">
-								<img
-									src="icons/{item.icon}.svg"
-									alt={item.title}
-									class="h-14 w-14 p-1 {categoryColor} rounded"
-								/>
+								<img src="icons/{item.icon}.svg" alt={item.title} class="h-14 w-14 p-1 {categoryColor} rounded" />
 							</div>
 							<div>
 								<h3 class="font-medium">{item.title}</h3>
