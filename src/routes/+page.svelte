@@ -1,29 +1,24 @@
-<script>
+<script lang="ts">
+	import Transition from 'svelte-transition';
+	import { createDialog } from 'svelte-headlessui';
 	import Category from '$lib/components/Category.svelte';
 	import categories from '$lib/data/categories.json';
 
-	import { Dialog, DialogOverlay, DialogTitle, DialogDescription } from '@rgossiaux/svelte-headlessui';
+	const dialog = createDialog({ label: 'rule', expanded: false });
 
-	let modalOpen = false;
-	let modalScroll = null;
-	let modalTitle = '';
-	let modalSubtitle = '';
-	let modalDescription = '';
-	let modalReference = '';
+	let dialogTitle = '';
+	let dialogSubtitle = '';
+	let dialogDescription = '';
+	let dialogReference = '';
 
 	function showModal(event) {
-		modalTitle = event.detail.title;
-		modalSubtitle = event.detail.subtitle;
-		modalDescription = event.detail.description;
-		modalReference = event.detail.reference;
-		modalOpen = true;
+		dialog.open();
+		dialogTitle = event.detail.title;
+		dialogSubtitle = event.detail.subtitle;
+		dialogDescription = event.detail.description;
+		dialogReference = event.detail.reference;
 	}
 </script>
-
-<svelte:head>
-	<title>D&D 5e | Справочник на русском языке</title>
-	<meta name="description" content="Краткая справка по основным правилам Dungeons & Dragons 5e" />
-</svelte:head>
 
 {#each categories as category}
 	<Category
@@ -35,44 +30,62 @@
 	/>
 {/each}
 
-<Dialog
-	class="fixed inset-0 z-10 min-h-screen overflow-y-auto"
-	open={modalOpen}
-	on:close={() => (modalOpen = false)}
-	initialFocus={modalScroll}
->
-	<div class="flex min-h-screen items-center justify-center">
-		<DialogOverlay class="fixed inset-0 bg-black opacity-30" on:click={() => (modalOpen = false)} />
-
-		<div
-			class="m-0 inline-block w-full max-w-2xl transform rounded bg-white p-4 text-left align-middle shadow-xl dark:bg-slate-800 md:m-4"
+<div class="relative z-10">
+	<Transition show={$dialog.expanded}>
+		<Transition
+			enter="ease-out duration-300"
+			enterFrom="opacity-0"
+			enterTo="opacity-100"
+			leave="ease-in duration-200"
+			leaveFrom="opacity-100"
+			leaveTo="opacity-0"
 		>
-			<DialogTitle class="mb-2">
-				<div class="flex space-x-2" bind:this={modalScroll}>
-					<h2 class="text-lg font-medium dark:text-slate-100">{modalTitle}</h2>
-					<span
-						class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"
-						>{modalReference}</span
-					>
-				</div>
-				{#if modalSubtitle}
-					<span class="my-2 text-sm text-slate-600 dark:text-slate-300">{modalSubtitle}</span>
-				{/if}
-			</DialogTitle>
+			<div
+				class="fixed inset-0 bg-black bg-opacity-25"
+				on:click={dialog.close}
+				on:keypress={dialog.close}
+			/>
+		</Transition>
 
-			<DialogDescription class="mt-4 text-base dark:text-slate-100">
-				{@html modalDescription}
-			</DialogDescription>
-
-			<div class="mt-4">
-				<button
-					type="button"
-					class="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-200 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
-					on:click={() => (modalOpen = false)}
+		<div class="fixed inset-0 overflow-y-auto">
+			<div class="flex min-h-full items-center justify-center p-2 text-center">
+				<Transition
+					enter="ease-out duration-300"
+					enterFrom="opacity-0 scale-95"
+					enterTo="opacity-100 scale-100"
+					leave="ease-in duration-200"
+					leaveFrom="opacity-100 scale-100"
+					leaveTo="opacity-0 scale-95"
 				>
-					Закрыть
-				</button>
+					<div
+						class="w-full max-w-md transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all"
+						use:dialog.modal
+					>
+						<h2 class="text-lg font-medium dark:text-slate-100">{dialogTitle}</h2>
+						<span
+							class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"
+							>{dialogReference}</span
+						>
+
+						{#if dialogSubtitle}
+							<span class="my-2 text-sm text-slate-600 dark:text-slate-300">{dialogSubtitle}</span>
+						{/if}
+
+						<div class="mt-4 text-base dark:text-slate-100">
+							{@html dialogDescription}
+						</div>
+
+						<div class="mt-4">
+							<button
+								type="button"
+								class="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-200 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
+								on:click={dialog.close}
+								>Закрыть
+							</button>
+						</div>
+					</div></Transition
+				>
 			</div>
 		</div>
-	</div>
-</Dialog>
+	</Transition>
+</div>

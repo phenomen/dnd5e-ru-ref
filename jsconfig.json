@@ -3,8 +3,9 @@
 		"baseUrl": ".",
 		"paths": {
 			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"]
-		}
+			"$lib/*": ["src/lib/*"]			
+		},
+		"resolveJsonModule": true
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"],
 	"extends": "./.svelte-kit/tsconfig.json"

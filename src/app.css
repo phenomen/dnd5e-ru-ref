@@ -34,10 +34,6 @@ ul {
 	@apply list-disc space-y-1 pl-4;
 }
 
-.open {
-	@apply rotate-90 transform;
-}
-
 /* GRADIENTS */
 
 .g-slate {
