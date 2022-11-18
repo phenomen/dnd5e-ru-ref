@@ -57,11 +57,13 @@
 						class="w-full max-w-md transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all dark:bg-slate-800"
 						use:dialog.modal
 					>
-						<h2 class="text-lg font-medium dark:text-slate-100">{dialogTitle}</h2>
-						<span
-							class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"
-							>{dialogReference}</span
-						>
+						<div class="flex space-x-2">
+							<h2 class="text-lg font-medium dark:text-slate-100">{dialogTitle}</h2>
+							<span
+								class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"
+								>{dialogReference}</span
+							>
+						</div>
 
 						{#if dialogSubtitle}
 							<span class="my-2 text-sm text-slate-600 dark:text-slate-300">{dialogSubtitle}</span>
