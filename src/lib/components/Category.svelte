@@ -22,14 +22,11 @@
 </script>
 
 <div class="my-1 md:my-2">
-	<button
-		use:category.button
-		class="{categoryColor} w-full rounded p-2 md:p-4 text-white flex items-center text-left"
-	>
+	<button use:category.button class="{categoryColor} flex w-full items-center rounded p-2 text-left text-white md:p-4">
 		<div class="flex-1">
-			<span class="font-medium mr-2 text-sm md:text-base">{categoryTitle}</span>
+			<span class="mr-2 text-sm font-medium md:text-base">{categoryTitle}</span>
 			{#if categorySubtitle}
-				<span class="px-2 py-1 rounded text-xs md:text-sm bg-white bg-opacity-20">{categorySubtitle}</span>
+				<span class="rounded bg-white bg-opacity-20 px-2 py-1 text-xs md:text-sm">{categorySubtitle}</span>
 			{/if}
 		</div>
 		<IconChevronRight class="h-5 w-5 {$category.expanded ? 'rotate-90 transform' : ''}" />
@@ -48,11 +45,7 @@
 								on:click={() => sendItem(rule.title, rule.subtitle, rule.description, rule.reference)}
 							>
 								<div class="mr-2 flex-shrink-0">
-									<img
-										src="icons/{rule.icon}.svg"
-										alt={rule.title}
-										class="h-14 w-14 p-1 {categoryColor} rounded"
-									/>
+									<img src="icons/{rule.icon}.svg" alt={rule.title} class="h-14 w-14 p-1 {categoryColor} rounded" />
 								</div>
 								<div>
 									<h3 class="font-medium">{rule.title}</h3>

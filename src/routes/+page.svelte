@@ -40,11 +40,7 @@
 			leaveFrom="opacity-100"
 			leaveTo="opacity-0"
 		>
-			<div
-				class="fixed inset-0 bg-black bg-opacity-25"
-				on:click={dialog.close}
-				on:keypress={dialog.close}
-			/>
+			<div class="fixed inset-0 bg-black bg-opacity-25" on:click={dialog.close} on:keypress={dialog.close} />
 		</Transition>
 
 		<div class="fixed inset-0 overflow-y-auto">
@@ -58,7 +54,7 @@
 					leaveTo="opacity-0 scale-95"
 				>
 					<div
-						class="w-full max-w-md transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all"
+						class="w-full max-w-md transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all dark:bg-slate-800"
 						use:dialog.modal
 					>
 						<h2 class="text-lg font-medium dark:text-slate-100">{dialogTitle}</h2>
