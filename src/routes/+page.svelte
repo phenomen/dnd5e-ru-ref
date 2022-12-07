@@ -4,7 +4,7 @@
 	import Category from '$lib/components/Category.svelte';
 	import categories from '$lib/data/categories.json';
 
-	const dialog = createDialog({ label: 'rule', expanded: false });
+	const dialog = createDialog({ label: '', expanded: false });
 
 	let dialogTitle = '';
 	let dialogSubtitle = '';
@@ -40,7 +40,11 @@
 			leaveFrom="opacity-100"
 			leaveTo="opacity-0"
 		>
-			<div class="fixed inset-0 bg-black bg-opacity-25" on:click={dialog.close} on:keypress={dialog.close} />
+			<div
+				class="fixed inset-0 bg-black bg-opacity-25"
+				on:click={dialog.close}
+				on:keypress={dialog.close}
+			/>
 		</Transition>
 
 		<div class="fixed inset-0 overflow-y-auto">
@@ -54,11 +58,14 @@
 					leaveTo="opacity-0 scale-95"
 				>
 					<div
-						class="w-full max-w-md transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all dark:bg-slate-800"
+						class="w-full max-w-2xl transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all dark:bg-slate-800"
 						use:dialog.modal
 					>
-						<div class="flex space-x-2">
-							<h2 class="text-lg font-medium dark:text-slate-100">{dialogTitle}</h2>
+						<div class="flex flex-col md:flex-row md:space-x-2">
+							<input hidden />
+							<h2 class="text-lg font-medium dark:text-slate-100">
+								{dialogTitle}
+							</h2>
 							<span
 								class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"
 								>{dialogReference}</span
@@ -69,7 +76,7 @@
 							<span class="my-2 text-sm text-slate-600 dark:text-slate-300">{dialogSubtitle}</span>
 						{/if}
 
-						<div class="mt-4 text-base dark:text-slate-100">
+						<div class="mt-4 text-sm dark:text-slate-100 md:text-base">
 							{@html dialogDescription}
 						</div>
 

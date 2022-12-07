@@ -22,7 +22,10 @@
 </script>
 
 <div class="my-1 md:my-2">
-	<button use:category.button class="{categoryColor} flex w-full items-center rounded p-2 text-left text-white md:p-4">
+	<button
+		use:category.button
+		class="{categoryColor} flex w-full items-center rounded p-2 text-left text-white md:p-4"
+	>
 		<div class="flex-1">
 			<span class="mr-2 text-sm font-medium md:text-base">{categoryTitle}</span>
 			{#if categorySubtitle}
@@ -45,7 +48,11 @@
 								on:click={() => sendItem(rule.title, rule.subtitle, rule.description, rule.reference)}
 							>
 								<div class="mr-2 flex-shrink-0">
-									<img src="icons/{rule.icon}.svg" alt={rule.title} class="h-14 w-14 p-1 {categoryColor} rounded" />
+									<img
+										src="icons/{rule.icon}.svg"
+										alt={rule.title}
+										class="h-14 w-14 p-1 {categoryColor} rounded"
+									/>
 								</div>
 								<div>
 									<h3 class="font-medium">{rule.title}</h3>
