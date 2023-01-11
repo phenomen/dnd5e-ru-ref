@@ -6,12 +6,12 @@
 
 	const dialog = createDialog({ label: '', expanded: false });
 
-	let dialogTitle = '';
-	let dialogSubtitle = '';
-	let dialogDescription = '';
-	let dialogReference = '';
+	let dialogTitle: string = '';
+	let dialogSubtitle: string = '';
+	let dialogDescription: string = '';
+	let dialogReference: string = '';
 
-	function showModal(event) {
+	function showModal(event: CustomEvent<any>) {
 		dialog.open();
 		dialogTitle = event.detail.title;
 		dialogSubtitle = event.detail.subtitle;
