@@ -8,7 +8,7 @@
 	export let categoryColor: string;
 	export let categoryDataset: string;
 
-	const datapath = '../data/' + categoryDataset + '.json';
+	const datapath = '../../data/' + categoryDataset + '.json';
 
 	const dispatch = createEventDispatcher();
 	const category = createDisclosure({ label: categoryDataset, expanded: false });
