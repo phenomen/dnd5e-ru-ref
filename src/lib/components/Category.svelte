@@ -8,6 +8,8 @@
 	export let categoryColor: string;
 	export let categoryDataset: string;
 
+	const datapath = '../data/' + categoryDataset + '.json';
+
 	const dispatch = createEventDispatcher();
 	const category = createDisclosure({ label: categoryDataset, expanded: false });
 
@@ -35,10 +37,10 @@
 		<IconChevronRight class="h-5 w-5 {$category.expanded ? 'rotate-90 transform' : ''}" />
 	</button>
 
-	{#await import(`../data/${categoryDataset}.json`) then dataset}
+	{#await import(datapath) then data}
 		{#if $category.expanded}
 			<div use:category.panel>
-				{#each dataset.default as item}
+				{#each data.default as item}
 					<h2 class="mt-4 font-semibold dark:text-slate-100">{item.title}</h2>
 					<p class="pt-0 mt-0 dark:text-slate-100 text-sm md:text-base">{item.subtitle}</p>
 					<div class="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
@@ -68,5 +70,7 @@
 				{/each}
 			</div>
 		{/if}
+	{:catch error}
+		{error.message}
 	{/await}
 </div>
