@@ -35,7 +35,7 @@
 		<IconChevronRight class="h-5 w-5 {$category.expanded ? 'rotate-90 transform' : ''}" />
 	</button>
 
-	{#await import(`./data/${categoryDataset}.json`) then dataset}
+	{#await import(`../data/${categoryDataset}.json`) then dataset}
 		{#if $category.expanded}
 			<div use:category.panel>
 				{#each dataset.default as item}
