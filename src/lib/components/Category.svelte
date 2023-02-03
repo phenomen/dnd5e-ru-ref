@@ -37,7 +37,7 @@
 		<div use:categoryDisclosure.panel>
 			{#each dataset as item}
 				<h2 class="mt-4 font-semibold dark:text-slate-100">{item.title}</h2>
-				<p class="mt-0 pt-0 text-sm dark:text-slate-100 md:text-base">{item.subtitle}</p>
+				<p class="mt-0 pt-0 text-sm dark:text-slate-100 md:text-base max-w-4xl">{item.subtitle}</p>
 				<div class="mb-4 grid grid-cols-1 gap-2 dark:text-slate-100 md:grid-cols-2 lg:grid-cols-3">
 					{#each item.rules as rule}
 						<button
@@ -54,9 +54,9 @@
 							<div>
 								<h3 class="font-medium">{rule.title}</h3>
 								{#if rule.subtitle}
-									<span class="mt-1 text-sm">
+									<p class="mt-1 text-sm leading-5">
 										{rule.subtitle}
-									</span>
+									</p>
 								{/if}
 							</div>
 						</button>
