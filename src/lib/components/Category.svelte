@@ -48,7 +48,7 @@
 								<img
 									src="/icons/{rule.icon}.svg"
 									alt={rule.title}
-									class="h-14 w-14 p-1 ring-2 ring-inset ring-white/50"
+									class="h-14 w-14 p-1 ring-2 ring-inset ring-white/50 rounded"
 								/>
 							</div>
 							<div>
