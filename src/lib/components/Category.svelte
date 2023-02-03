@@ -35,7 +35,7 @@
 		<IconChevronRight class="h-5 w-5 {$category.expanded ? 'rotate-90 transform' : ''}" />
 	</button>
 
-	{#await fetch(`data/${categoryDataset}.json`).then((res) => res.json()) then categoryItems}
+	{#await fetch(`https://5e.ruleplaying.com/data/${categoryDataset}.json`).then((res) => res.json()) then categoryItems}
 		{#if $category.expanded}
 			<div use:category.panel>
 				{#each categoryItems as item}
@@ -47,11 +47,11 @@
 								class="flex rounded p-2 text-left shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-slate-100 "
 								on:click={() => sendItem(rule.title, rule.subtitle, rule.description, rule.reference)}
 							>
-								<div class="mr-2 flex-shrink-0">
+								<div class="mr-2 p-1 flex-shrink-0 {categoryColor}  rounded">
 									<img
-										src="icons/{rule.icon}.svg"
+										src="/icons/{rule.icon}.svg"
 										alt={rule.title}
-										class="h-14 w-14 p-1 {categoryColor} rounded"
+										class="h-14 w-14 p-1 rounded bg-white"
 									/>
 								</div>
 								<div>
