@@ -35,10 +35,10 @@
 		<IconChevronRight class="h-5 w-5 {$category.expanded ? 'rotate-90 transform' : ''}" />
 	</button>
 
-	{#await fetch(`https://5e.ruleplaying.com/data/${categoryDataset}.json`).then((res) => res.json()) then categoryItems}
+	{#await import(`../data/${categoryDataset}.json`) then dataset}
 		{#if $category.expanded}
 			<div use:category.panel>
-				{#each categoryItems as item}
+				{#each dataset.default as item}
 					<h2 class="mt-4 font-semibold dark:text-slate-100">{item.title}</h2>
 					<p class="pt-0 mt-0 dark:text-slate-100 text-sm md:text-base">{item.subtitle}</p>
 					<div class="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 dark:text-slate-100">
@@ -68,5 +68,7 @@
 				{/each}
 			</div>
 		{/if}
+	{:catch error}
+		{error.message}
 	{/await}
 </div>
