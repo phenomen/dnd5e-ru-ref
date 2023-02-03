@@ -34,6 +34,10 @@ ul {
 	@apply list-disc space-y-1 pl-4;
 }
 
+svg {
+	@apply fill-white text-white;
+}
+
 /* GRADIENTS */
 
 .g-slate {

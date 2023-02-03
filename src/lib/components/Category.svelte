@@ -47,11 +47,11 @@
 								class="flex rounded p-2 text-left shadow hover:cursor-pointer dark:bg-slate-800 hover:dark:bg-slate-700 bg-white hover:bg-slate-100 "
 								on:click={() => sendItem(rule.title, rule.subtitle, rule.description, rule.reference)}
 							>
-								<div class="mr-2 p-1 flex-shrink-0 {categoryColor}  rounded">
+								<div class="mr-2 flex-shrink-0 {categoryColor} rounded">
 									<img
 										src="/icons/{rule.icon}.svg"
 										alt={rule.title}
-										class="h-14 w-14 p-1 rounded bg-white"
+										class="h-14 w-14 p-1 ring-2 ring-inset ring-white/50"
 									/>
 								</div>
 								<div>
