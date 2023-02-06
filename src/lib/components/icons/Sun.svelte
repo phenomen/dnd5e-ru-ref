@@ -1,13 +1,19 @@
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	fill="none"
+	class={$$props.class}
+	width="32"
+	height="32"
 	viewBox="0 0 24 24"
-	stroke="currentColor"
-	stroke-width="2"
->
-	<path
+	><g
+		fill="none"
+		stroke="currentColor"
 		stroke-linecap="round"
 		stroke-linejoin="round"
-		d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-	/>
-</svg>
+		stroke-width="2"
+		><circle
+			cx="12"
+			cy="12"
+			r="4"
+		/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></g
+	></svg
+>

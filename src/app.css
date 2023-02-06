@@ -37,85 +37,69 @@ ul {
 /* GRADIENTS */
 
 .g-slate {
-	@apply bg-slate-600;
+	@apply bg-slate-600 hover:bg-slate-700;
 }
 
 .g-stone {
-	@apply bg-stone-600;
+	@apply bg-stone-600 hover:bg-stone-700;
 }
 
 .g-red {
-	@apply bg-red-600;
+	@apply bg-red-600 hover:bg-red-700;
 }
 
 .g-orange {
-	@apply bg-orange-600;
+	@apply bg-orange-600 hover:bg-orange-700;
 }
 
 .g-amber {
-	@apply bg-amber-600;
+	@apply bg-amber-600 hover:bg-amber-700;
 }
 
 .g-yellow {
-	@apply bg-yellow-500;
+	@apply bg-yellow-500 hover:bg-yellow-600;
 }
 
 .g-lime {
-	@apply bg-lime-600;
+	@apply bg-lime-600 hover:bg-lime-700;
 }
 
 .g-green {
-	@apply bg-green-600;
+	@apply bg-green-600 hover:bg-green-700;
 }
 
 .g-emerald {
-	@apply bg-emerald-600;
+	@apply bg-emerald-600 hover:bg-emerald-700;
 }
 
 .g-teal {
-	@apply bg-teal-600;
+	@apply bg-teal-600 hover:bg-teal-700;
 }
 
 .g-cyan {
-	@apply bg-cyan-600;
+	@apply bg-cyan-600 hover:bg-cyan-700;
 }
 
 .g-sky {
-	@apply bg-sky-600;
+	@apply bg-sky-600 hover:bg-sky-700;
 }
 
 .g-blue {
-	@apply bg-blue-600;
+	@apply bg-blue-600 hover:bg-blue-700;
 }
 
 .g-indigo {
-	@apply bg-indigo-600;
+	@apply bg-indigo-600 hover:bg-indigo-700;
 }
 
 .g-violet {
-	@apply bg-violet-600;
+	@apply bg-violet-600 hover:bg-violet-700;
 }
 
 .g-purple {
-	@apply bg-purple-600;
+	@apply bg-purple-600 hover:bg-purple-700;
 }
 
 .g-fuchsia {
-	@apply bg-fuchsia-600;
-}
-
-.g-hyper {
-	@apply bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500;
-}
-
-.g-oceanic {
-	@apply bg-gradient-to-br from-green-300 via-blue-500 to-purple-700;
-}
-
-.g-cottoncandy {
-	@apply bg-gradient-to-tl from-pink-300 via-purple-300 to-indigo-400;
-}
-
-.g-sunset {
-	@apply bg-gradient-to-br from-indigo-200 via-red-200 to-yellow-100;
+	@apply bg-fuchsia-600 hover:bg-fuchsia-700;
 }

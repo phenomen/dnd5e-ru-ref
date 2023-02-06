@@ -354,8 +354,8 @@ packages:
         resolution: { integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g== }
         dev: true
 
-    /@types/node/18.11.18:
-        resolution: { integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA== }
+    /@types/node/18.11.19:
+        resolution: { integrity: sha512-YUgMWAQBWLObABqrvx8qKO1enAvBUdjZOAWQ5grBAkp5LQv45jBvYKZ3oFS9iKRCQyFjqw6iuEa1vmFqtxYLZw== }
         dev: true
 
     /@types/pug/2.0.6:
@@ -365,7 +365,7 @@ packages:
     /@types/sass/1.43.1:
         resolution: { integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g== }
         dependencies:
-            '@types/node': 18.11.18
+            '@types/node': 18.11.19
         dev: true
 
     /@vercel/analytics/0.1.8_react@18.2.0:
@@ -520,7 +520,7 @@ packages:
         dependencies:
             caniuse-lite: 1.0.30001450
             electron-to-chromium: 1.4.286
-            node-releases: 2.0.9
+            node-releases: 2.0.10
             update-browserslist-db: 1.0.10_browserslist@4.21.5
         dev: true
 
@@ -961,8 +961,8 @@ packages:
             yallist: 4.0.0
         dev: true
 
-    /minipass/4.0.1:
-        resolution: { integrity: sha512-V9esFpNbK0arbN3fm2sxDKqMYgIp7XtVdE4Esj+PE4Qaaxdg1wIw48ITQIOn1sc8xXSmUviVL3cyjMqPlrVkiA== }
+    /minipass/4.0.2:
+        resolution: { integrity: sha512-4Hbzei7ZyBp+1aw0874YWpKOubZd/jc53/XU+gkYry1QV+VvrbO8icLM5CUtm4F0hyXn85DXYKEMIS26gitD3A== }
         engines: { node: '>=8' }
         dev: true
 
@@ -1024,8 +1024,8 @@ packages:
         hasBin: true
         dev: true
 
-    /node-releases/2.0.9:
-        resolution: { integrity: sha512-2xfmOrRkGogbTK9R6Leda0DGiXeY3p2NJpy4+gNCffdUvV6mdEJnaDEic1i3Ec2djAo8jWYoJMR5PB0MSMpxUA== }
+    /node-releases/2.0.10:
+        resolution: { integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w== }
         dev: true
 
     /nopt/5.0.0:
@@ -1321,8 +1321,8 @@ packages:
             glob: 7.2.3
         dev: true
 
-    /rollup/3.13.0:
-        resolution: { integrity: sha512-HJwQtrXAc0AmyDohTJ/2c+Bx/sWPScJLlAUJ1kuD7rAkCro8Cr2SnVB2gVYBiSLxpgD2kZ24jbyXtG++GumrYQ== }
+    /rollup/3.14.0:
+        resolution: { integrity: sha512-o23sdgCLcLSe3zIplT9nQ1+r97okuaiR+vmAPZPTDYB7/f3tgWIYNyiQveMsZwshBT0is4eGax/HH83Q7CG+/Q== }
         engines: { node: '>=14.18.0', npm: '>=8.0.0' }
         hasBin: true
         optionalDependencies:
@@ -1557,7 +1557,7 @@ packages:
         dependencies:
             chownr: 2.0.0
             fs-minipass: 2.1.0
-            minipass: 4.0.1
+            minipass: 4.0.2
             minizlib: 2.1.2
             mkdirp: 1.0.4
             yallist: 4.0.0
@@ -1642,7 +1642,7 @@ packages:
             esbuild: 0.16.17
             postcss: 8.4.21
             resolve: 1.22.1
-            rollup: 3.13.0
+            rollup: 3.14.0
         optionalDependencies:
             fsevents: 2.3.2
         dev: true

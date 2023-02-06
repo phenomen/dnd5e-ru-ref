@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { toggleAll } from '$lib/components/store';
 	import { createEventDispatcher } from 'svelte';
 	import { createDisclosure } from 'svelte-headlessui';
 	import { IconChevronRight } from '$lib/components/icons';
@@ -17,6 +18,8 @@
 			reference: reference,
 		});
 	}
+
+	$: $toggleAll ? categoryDisclosure.open() : categoryDisclosure.close();
 </script>
 
 <div class="my-1 md:my-2">
@@ -36,9 +39,9 @@
 	{#if $categoryDisclosure.expanded}
 		<div use:categoryDisclosure.panel>
 			{#each dataset as item}
-				<h2 class="mt-4 font-semibold dark:text-slate-100">{item.title}</h2>
-				<p class="mt-0 pt-0 text-sm dark:text-slate-100 md:text-base max-w-4xl">{item.subtitle}</p>
-				<div class="mb-4 grid grid-cols-1 gap-2 dark:text-slate-100 md:grid-cols-2 lg:grid-cols-3">
+				<h2 class="mt-4 text-lg font-semibold dark:text-slate-100">{item.title}</h2>
+				<p class="mt-0 max-w-4xl pt-0 text-sm dark:text-slate-100 md:text-base">{item.subtitle}</p>
+				<div class="grid grid-cols-1 gap-2 dark:text-slate-100 md:grid-cols-2 lg:grid-cols-3">
 					{#each item.rules as rule}
 						<button
 							class="flex items-center rounded bg-white p-2 text-left shadow hover:cursor-pointer hover:bg-slate-100 dark:bg-slate-800 hover:dark:bg-slate-700"
@@ -48,7 +51,7 @@
 								<img
 									src="/icons/{rule.icon}.svg"
 									alt={rule.title}
-									class="h-14 w-14 p-1 ring-2 ring-inset ring-white/50 rounded"
+									class="h-14 w-14 rounded p-1 ring-2 ring-inset ring-white/50"
 								/>
 							</div>
 							<div>

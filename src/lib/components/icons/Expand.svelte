@@ -10,6 +10,6 @@
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="2"
-		d="M12 3a6.364 6.364 0 0 0 9 9a9 9 0 1 1-9-9Z"
+		d="m7 15l5 5l5-5M7 9l5-5l5 5"
 	/></svg
 >
