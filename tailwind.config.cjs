@@ -6,7 +6,7 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
+				sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},

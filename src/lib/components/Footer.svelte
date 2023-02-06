@@ -1,5 +1,5 @@
 <script>
-	import { IconCode } from '$lib/components/icons';
+	import { Code2 as IconCode } from 'lucide-svelte';
 </script>
 
 <div class="mt-20 items-center text-xs text-slate-400">

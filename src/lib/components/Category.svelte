@@ -2,7 +2,7 @@
 	import { toggleAll } from '$lib/components/store';
 	import { createEventDispatcher } from 'svelte';
 	import { createDisclosure } from 'svelte-headlessui';
-	import { IconChevronRight } from '$lib/components/icons';
+	import { ChevronRight as IconChevronRight } from 'lucide-svelte';
 
 	export let category;
 	export let dataset;

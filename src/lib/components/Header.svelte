@@ -1,6 +1,6 @@
 <script>
 	import { toggleAll } from '$lib/components/store';
-	import { IconSun, IconMoon, IconExpand, IconCollapse } from '$lib/components/icons';
+	import { Sun as IconSun, Moon as IconMoon, ChevronsUpDown as IconExpand, ChevronsDownUp as IconCollapse } from 'lucide-svelte';
 
 	let theme = 'light';
 
@@ -19,7 +19,7 @@
 	}
 </script>
 
-<div class="my-4 flex items-center space-x-4 dark:text-slate-100">
+<div class="my-4 flex items-center space-x-2 dark:text-slate-100 sm:space-x-4">
 	<h1 class="flex-1 text-sm font-bold uppercase ">D&D 5e - Справочник на русском языке</h1>
 
 	<button
