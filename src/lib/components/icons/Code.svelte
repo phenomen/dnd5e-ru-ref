@@ -4,16 +4,12 @@
 	width="32"
 	height="32"
 	viewBox="0 0 24 24"
-	><g
+	><path
 		fill="none"
 		stroke="currentColor"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="2"
-		><circle
-			cx="12"
-			cy="12"
-			r="4"
-		/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></g
-	></svg
+		d="m18 16l4-4l-4-4M6 8l-4 4l4 4m8.5-12l-5 16"
+	/></svg
 >
