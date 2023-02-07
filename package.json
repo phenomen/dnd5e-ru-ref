@@ -1,6 +1,6 @@
 {
-	"name": "dnd5e-quickref-ru",
-	"version": "2.5",
+	"name": "@phenomen/dnd5e-ru-ref",
+	"version": "2.6",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -10,11 +10,11 @@
 	},
 	"devDependencies": {
 		"@fontsource/dm-sans": "^4.5.9",
-		"@sveltejs/adapter-vercel": "^1.0.6",
-		"@sveltejs/kit": "^1.4.0",
+		"@sveltejs/adapter-vercel": "^2.0.1",
+		"@sveltejs/kit": "^1.5.0",
 		"@vercel/analytics": "^0.1.8",
 		"autoprefixer": "^10.4.13",
-		"lucide-svelte": "^0.109.0",
+		"lucide-svelte": "^0.112.0",
 		"postcss": "^8.4.21",
 		"postcss-load-config": "4.0.1",
 		"prettier": "^2.8.3",
