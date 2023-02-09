@@ -6,6 +6,8 @@
 
 	export let data: PageData;
 
+	const dataset = data.data;
+
 	const dialog = createDialog({ label: '', expanded: false });
 
 	let dialogTitle: string = '';
@@ -22,10 +24,10 @@
 	}
 </script>
 
-{#each data.category as category}
+{#each dataset['/src/lib/data/category.json'] as category}
 	<Category
 		{category}
-		dataset={data[category.dataset]}
+		dataset={dataset[category.dataset]}
 		on:message={showModal}
 	/>
 {/each}

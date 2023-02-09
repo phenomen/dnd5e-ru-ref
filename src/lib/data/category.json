@@ -1,85 +1,85 @@
 [
 	{
-		"dataset": "movement",
+		"dataset": "/src/lib/data/movement.json",
 		"title": "Движение",
 		"subtitle": "ограничено скоростью",
 		"color": "g-stone"
 	},
 	{
-		"dataset": "action",
+		"dataset": "/src/lib/data/action.json",
 		"title": "Действия",
 		"subtitle": "1 за ход",
 		"color": "g-red"
 	},
 	{
-		"dataset": "bonusaction",
+		"dataset": "/src/lib/data/bonusaction.json",
 		"title": "Бонусные действия",
 		"subtitle": "максимум 1 за ход",
 		"color": "g-orange"
 	},
 	{
-		"dataset": "reaction",
+		"dataset": "/src/lib/data/reaction.json",
 		"title": "Реакции",
 		"subtitle": "1 до вашего следующего хода",
 		"color": "g-amber"
 	},
 	{
-		"dataset": "freeaction",
+		"dataset": "/src/lib/data/freeaction.json",
 		"title": "Свободные действия",
 		"color": "g-yellow"
 	},
 	{
-		"dataset": "condition",
+		"dataset": "/src/lib/data/condition.json",
 		"title": "Состояния",
 		"color": "g-lime"
 	},
 	{
-		"dataset": "environment",
+		"dataset": "/src/lib/data/environment.json",
 		"title": "Окружающая среда и восприятие",
 		"color": "g-green"
 	},
 	{
-		"dataset": "hitpoint",
+		"dataset": "/src/lib/data/hitpoint.json",
 		"title": "Хиты, смерть и отдых",
 		"color": "g-emerald"
 	},
 	{
-		"dataset": "damage",
+		"dataset": "/src/lib/data/damage.json",
 		"title": "Урон и атака",
 		"color": "g-teal"
 	},
 	{
-		"dataset": "abilityscore",
+		"dataset": "/src/lib/data/abilityscore.json",
 		"title": "Характеристики и навыки",
 		"color": "g-cyan"
 	},
 	{
-		"dataset": "equipment",
+		"dataset": "/src/lib/data/equipment.json",
 		"title": "Инструменты и оружие",
 		"color": "g-sky"
 	},
 	{
-		"dataset": "spellcasting",
+		"dataset": "/src/lib/data/spellcasting.json",
 		"title": "Заклинания",
 		"color": "g-blue"
 	},
 	{
-		"dataset": "travel",
+		"dataset": "/src/lib/data/travel.json",
 		"title": "Путешествие",
 		"color": "g-indigo"
 	},
 	{
-		"dataset": "multiclassing",
+		"dataset": "/src/lib/data/multiclassing.json",
 		"title": "Мультиклассирование",
 		"color": "g-violet"
 	},
 	{
-		"dataset": "language",
+		"dataset": "/src/lib/data/language.json",
 		"title": "Языки",
 		"color": "g-purple"
 	},
 	{
-		"dataset": "xp",
+		"dataset": "/src/lib/data/xp.json",
 		"title": "Опыт",
 		"color": "g-fuchsia"
 	}
