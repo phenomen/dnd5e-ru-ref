@@ -1,6 +1,10 @@
 <script>
 	import { toggleAll } from '$lib/components/store';
-	import { Sun as IconSun, Moon as IconMoon, ChevronsUpDown as IconExpand, ChevronsDownUp as IconCollapse } from 'lucide-svelte';
+
+	import LucideSun from '~icons/lucide/sun';
+	import LucideMoon from '~icons/lucide/moon';
+	import LucideChevronsUpDown from '~icons/lucide/chevrons-up-down';
+	import LucideChevronsDownUp from '~icons/lucide/chevrons-down-up';
 
 	let theme = 'light';
 
@@ -27,9 +31,9 @@
 		on:click={() => disclosureToggle()}
 	>
 		{#if $toggleAll === false}
-			<IconExpand class="h-6 w-6" />
+			<LucideChevronsUpDown class="h-6 w-6" />
 		{:else}
-			<IconCollapse class="h-6 w-6" />
+			<LucideChevronsDownUp class="h-6 w-6" />
 		{/if}
 	</button>
 
@@ -38,9 +42,9 @@
 		on:click={() => themeToggle()}
 	>
 		{#if theme === 'dark'}
-			<IconSun class="h-6 w-6 text-yellow-400 " />
+			<LucideSun class="h-6 w-6 text-yellow-400 " />
 		{:else}
-			<IconMoon class="h-6 w-6 text-slate-700" />
+			<LucideMoon class="h-6 w-6 text-slate-700" />
 		{/if}
 	</button>
 </div>

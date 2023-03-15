@@ -1,5 +1,5 @@
 <script>
-	import { Code2 as IconCode } from 'lucide-svelte';
+	import LucideCode2 from '~icons/lucide/code-2';
 </script>
 
 <div class="mt-20 items-center text-xs text-slate-400">
@@ -9,7 +9,7 @@
 		rel="noreferrer"
 		class="flex items-center justify-center"
 	>
-		<IconCode class="h-5 w-5" />
+		<LucideCode2 class="h-5 w-5" />
 		<span class="ml-1 font-medium hover:underline">open source by phenomen#1337</span>
 	</a>
 </div>

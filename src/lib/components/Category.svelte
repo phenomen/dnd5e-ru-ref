@@ -2,9 +2,17 @@
 	import { toggleAll } from '$lib/components/store';
 	import { createEventDispatcher } from 'svelte';
 	import { createDisclosure } from 'svelte-headlessui';
-	import { ChevronRight as IconChevronRight } from 'lucide-svelte';
 
-	export let category;
+	import LucideChevronRight from '~icons/lucide/chevron-right';
+
+	type Category = {
+		dataset: string;
+		title: string;
+		subtitle: string;
+		color: string;
+	};
+
+	export let category: Category;
 	export let dataset;
 
 	const dispatch = createEventDispatcher();
@@ -33,14 +41,18 @@
 				<span class="rounded bg-white bg-opacity-20 px-2 py-1 text-xs md:text-sm">{category.subtitle}</span>
 			{/if}
 		</div>
-		<IconChevronRight class="h-5 w-5 {$categoryDisclosure.expanded ? 'rotate-90 transform' : ''}" />
+		<LucideChevronRight class="h-5 w-5 {$categoryDisclosure.expanded ? 'rotate-90 transform' : ''}" />
 	</button>
 
 	{#if $categoryDisclosure.expanded}
 		<div use:categoryDisclosure.panel>
 			{#each dataset as item}
-				<h2 class="mt-4 text-lg font-semibold dark:text-slate-100">{item.title}</h2>
-				<p class="mt-0 max-w-4xl pt-0 text-sm dark:text-slate-100 md:text-base">{item.subtitle}</p>
+				<h2 class="mt-4 text-lg font-semibold dark:text-slate-100">
+					{item.title}
+				</h2>
+				<p class="mt-0 max-w-4xl pt-0 text-sm dark:text-slate-100 md:text-base">
+					{item.subtitle}
+				</p>
 				<div class="grid grid-cols-1 gap-2 dark:text-slate-100 md:grid-cols-2 lg:grid-cols-3">
 					{#each item.rules as rule}
 						<button
