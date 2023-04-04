@@ -1,4 +1,6 @@
 <script lang="ts">
+	import RuleIcon from '$lib/components/RuleIcon.svelte';
+
 	import { toggleAll } from '$lib/components/store';
 	import { createEventDispatcher } from 'svelte';
 	import { createDisclosure } from 'svelte-headlessui';
@@ -8,12 +10,26 @@
 	type Category = {
 		dataset: string;
 		title: string;
-		subtitle: string;
+		subtitle?: string;
 		color: string;
 	};
 
+	type Dataset = {
+		title: string;
+		subtitle?: string;
+		rules: Rule[];
+	};
+
+	type Rule = {
+		title: string;
+		subtitle: string;
+		icon: string;
+		reference: string;
+		description: string;
+	};
+
 	export let category: Category;
-	export let dataset;
+	export let dataset: Dataset[];
 
 	const dispatch = createEventDispatcher();
 	const categoryDisclosure = createDisclosure({ label: category.title, expanded: false });
@@ -23,7 +39,7 @@
 			title: title,
 			subtitle: subtitle,
 			description: description,
-			reference: reference,
+			reference: reference
 		});
 	}
 
@@ -33,15 +49,19 @@
 <div class="my-1 md:my-2">
 	<button
 		use:categoryDisclosure.button
-		class="{category.color} flex w-full items-center rounded p-2 text-left text-white md:p-4"
+		class="{category.color} flex w-full items-center rounded border-2 p-2 text-left dark:bg-slate-900 md:p-4"
 	>
-		<div class="flex-1">
+		<div class="flex-1 items-center text-slate-900 dark:text-slate-100">
 			<span class="mr-2 text-sm font-medium md:text-base">{category.title}</span>
 			{#if category.subtitle}
-				<span class="rounded bg-white bg-opacity-20 px-2 py-1 text-xs md:text-sm">{category.subtitle}</span>
+				<span class="border-l-2 px-2 text-xs md:text-sm">{category.subtitle}</span>
 			{/if}
 		</div>
-		<LucideChevronRight class="h-5 w-5 {$categoryDisclosure.expanded ? 'rotate-90 transform' : ''}" />
+		<LucideChevronRight
+			class="h-5 w-5 dark:text-slate-100 {$categoryDisclosure.expanded
+				? 'rotate-90 transform'
+				: ''}"
+		/>
 	</button>
 
 	{#if $categoryDisclosure.expanded}
@@ -56,15 +76,11 @@
 				<div class="grid grid-cols-1 gap-2 dark:text-slate-100 md:grid-cols-2 lg:grid-cols-3">
 					{#each item.rules as rule}
 						<button
-							class="flex items-center rounded bg-white p-2 text-left shadow hover:cursor-pointer hover:bg-slate-100 dark:bg-slate-800 hover:dark:bg-slate-700"
+							class="flex rounded bg-white fill-white p-2 text-left shadow hover:cursor-pointer hover:bg-slate-100 dark:bg-slate-800 hover:dark:bg-slate-700"
 							on:click={() => sendItem(rule.title, rule.subtitle, rule.description, rule.reference)}
 						>
-							<div class="mr-2 flex-shrink-0 {category.color} rounded">
-								<img
-									src="/icons/{rule.icon}.svg"
-									alt={rule.title}
-									class="h-14 w-14 rounded p-1 ring-2 ring-inset ring-white/50"
-								/>
+							<div class="mr-2 flex-shrink-0 {category.color} rounded border-2">
+								<RuleIcon icon={rule.icon} />
 							</div>
 							<div>
 								<h3 class="font-medium">{rule.title}</h3>

@@ -3,10 +3,20 @@
 	import Transition from 'svelte-transition';
 	import { createDialog } from 'svelte-headlessui';
 	import Category from '$lib/components/Category.svelte';
+	import categoriesData from '$lib/data/category.json';
+
+	type Category = {
+		dataset: string;
+		title: string;
+		subtitle?: string;
+		color: string;
+	};
 
 	export let data: PageData;
 
-	const dataset = data.data;
+	const dataset: any = data.data;
+
+	const categories: Category[] = categoriesData;
 
 	const dialog = createDialog({ label: '', expanded: false });
 
@@ -24,12 +34,8 @@
 	}
 </script>
 
-{#each dataset['/src/lib/data/category.json'] as category}
-	<Category
-		{category}
-		dataset={dataset[category.dataset]}
-		on:message={showModal}
-	/>
+{#each categories as category}
+	<Category {category} dataset={dataset[category.dataset]} on:message={showModal} />
 {/each}
 
 <div class="relative z-10">
@@ -42,11 +48,7 @@
 
 		<div class="fixed inset-0 overflow-y-auto">
 			<div class="flex min-h-full items-center justify-center p-2 text-center">
-				<Transition
-					enter="ease-out duration-200"
-					enterFrom="opacity-0"
-					enterTo="opacity-100"
-				>
+				<Transition enter="ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100">
 					<div
 						class="w-full max-w-2xl transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all dark:bg-slate-800"
 						use:dialog.modal

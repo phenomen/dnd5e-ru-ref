@@ -1,6 +1,6 @@
 {
 	"name": "@phenomen/dnd5e-ru-ref",
-	"version": "2.7",
+	"version": "2.8",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -10,23 +10,24 @@
 	},
 	"devDependencies": {
 		"@fontsource/dm-sans": "^4.5.9",
+		"@iconify-json/lucide": "^1.1.75",
+		"@iconify-json/game-icons": "^1.1.2",
 		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.13.0",
-		"@iconify-json/lucide": "^1.1.71",
+		"@sveltejs/kit": "^1.15.1",
 		"autoprefixer": "^10.4.14",
 		"postcss": "^8.4.21",
 		"postcss-load-config": "4.0.1",
-		"prettier": "^2.8.5",
-		"prettier-plugin-svelte": "^2.9.0",
-		"prettier-plugin-tailwindcss": "^0.2.5",
-		"svelte": "^3.57.0",
+		"prettier": "^2.8.7",
+		"prettier-plugin-svelte": "^2.10.0",
+		"prettier-plugin-tailwindcss": "^0.2.6",
+		"svelte": "^3.58.0",
 		"svelte-headlessui": "0.0.15",
-		"svelte-preprocess": "^5.0.3",
 		"svelte-transition": "^0.0.7",
-		"tailwindcss": "^3.2.7",
-		"typescript": "^5.0.2",
-		"vite": "^4.2.1",
-		"unplugin-icons": "^0.15.3"
+		"tailwindcss": "^3.3.1",
+		"typescript": "^5.0.3",
+		"unplugin-icons": "^0.16.1",
+		"unplugin-auto-import": "^0.15.2",
+		"vite": "^4.2.1"
 	},
 	"type": "module"
 }

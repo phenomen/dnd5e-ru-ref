@@ -6,10 +6,10 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
-			},
-		},
-	},
+				sans: ['DM Sans', ...defaultTheme.fontFamily.sans]
+			}
+		}
+	}
 };
 
 module.exports = config;

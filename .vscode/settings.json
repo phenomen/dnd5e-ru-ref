@@ -1,0 +1,71 @@
+{
+	// Visuals
+	"workbench.colorTheme": "Monokai Pro",
+	"editor.fontFamily": "Fira Code, Input Code, monospace",
+	"editor.fontSize": 15,
+	"editor.lineHeight": 1.5,
+
+	//Editor
+	"editor.tabSize": 2,
+	"editor.guides.bracketPairs": "active",
+	"editor.inlineSuggest.enabled": true,
+	"editor.accessibilitySupport": "off",
+	"search.exclude": {
+		"**/.astro": true,
+		"**/.git": true,
+		"**/.github": true,
+		"**/.nuxt": true,
+		"**/.output": true,
+		"**/.pnpm": true,
+		"**/.svelte-kit": true,
+		"**/.vscode": true,
+		"**/.yarn": true,
+		"**/bower_components": true,
+		"**/dist/**": true,
+		"**/logs": true,
+		"**/node_modules": true,
+		"**/out/**": true,
+		"**/package-lock.json": true,
+		"**/pnpm-lock.yaml": true,
+		"**/tmp": true,
+		"**/yarn.lock": true
+	},
+
+	//Extensions
+	"markdoc.experimental": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": false,
+		"source.organizeImports.rome": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	//Files
+	"files.associations": {
+		"*.mdoc": "markdoc"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "rome.rome"
+	},
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+	"[markdoc]": {
+		"editor.fontFamily": "Fira Sans, Noto Sans, sans-serif",
+		"editor.fontSize": 18,
+		"editor.defaultFormatter": "mohitsingh.markdoc"
+	},
+	"[markdown]": {
+		"editor.fontFamily": "Fira Sans, Noto Sans, sans-serif",
+		"editor.fontSize": 18,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}

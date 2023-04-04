@@ -19,7 +19,7 @@ table {
 }
 
 thead {
-	@apply bg-slate-100 dark:bg-slate-700;
+	@apply border-slate-100 dark:bg-slate-700;
 }
 
 th {
@@ -37,69 +37,69 @@ ul {
 /* GRADIENTS */
 
 .g-slate {
-	@apply bg-slate-600 hover:bg-slate-700;
+	@apply border-slate-600 text-slate-600 hover:border-slate-700;
 }
 
 .g-stone {
-	@apply bg-stone-600 hover:bg-stone-700;
+	@apply border-stone-600 text-stone-600 hover:border-stone-700;
 }
 
 .g-red {
-	@apply bg-red-600 hover:bg-red-700;
+	@apply border-red-600 text-red-600 hover:border-red-700;
 }
 
 .g-orange {
-	@apply bg-orange-600 hover:bg-orange-700;
+	@apply border-orange-600 text-orange-600 hover:border-orange-700;
 }
 
 .g-amber {
-	@apply bg-amber-600 hover:bg-amber-700;
+	@apply border-amber-600 text-amber-600 hover:border-amber-700;
 }
 
 .g-yellow {
-	@apply bg-yellow-500 hover:bg-yellow-600;
+	@apply border-yellow-500 text-yellow-600 hover:border-yellow-500;
 }
 
 .g-lime {
-	@apply bg-lime-600 hover:bg-lime-700;
+	@apply border-lime-600 text-lime-600 hover:border-lime-700;
 }
 
 .g-green {
-	@apply bg-green-600 hover:bg-green-700;
+	@apply border-green-600 text-green-600 hover:border-green-700;
 }
 
 .g-emerald {
-	@apply bg-emerald-600 hover:bg-emerald-700;
+	@apply border-emerald-600 text-emerald-600 hover:border-emerald-700;
 }
 
 .g-teal {
-	@apply bg-teal-600 hover:bg-teal-700;
+	@apply border-teal-600 text-teal-600 hover:border-teal-700;
 }
 
 .g-cyan {
-	@apply bg-cyan-600 hover:bg-cyan-700;
+	@apply border-cyan-600 text-cyan-600 hover:border-cyan-700;
 }
 
 .g-sky {
-	@apply bg-sky-600 hover:bg-sky-700;
+	@apply border-sky-600 text-sky-600 hover:border-sky-700;
 }
 
 .g-blue {
-	@apply bg-blue-600 hover:bg-blue-700;
+	@apply border-blue-600 text-blue-600 hover:border-blue-700;
 }
 
 .g-indigo {
-	@apply bg-indigo-600 hover:bg-indigo-700;
+	@apply border-indigo-600 text-indigo-600 hover:border-indigo-700;
 }
 
 .g-violet {
-	@apply bg-violet-600 hover:bg-violet-700;
+	@apply border-violet-600 text-violet-600 hover:border-violet-700;
 }
 
 .g-purple {
-	@apply bg-purple-600 hover:bg-purple-700;
+	@apply border-purple-600 text-purple-600 hover:border-purple-700;
 }
 
 .g-fuchsia {
-	@apply bg-fuchsia-600 hover:bg-fuchsia-700;
+	@apply border-fuchsia-600 text-fuchsia-600 hover:border-fuchsia-700;
 }
