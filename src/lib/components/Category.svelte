@@ -29,7 +29,7 @@
 <div class="my-1 md:my-2">
 	<button
 		use:categoryDisclosure.button
-		class="{category.color} flex w-full items-center rounded border-2 p-2 text-left dark:bg-slate-900 md:p-4"
+		class="{category.color} flex w-full items-center rounded border-2 bg-white p-2 text-left dark:bg-slate-900 md:p-4"
 	>
 		<div class="flex-1 items-center text-slate-900 dark:text-slate-100">
 			<span class="mr-2 text-sm font-medium md:text-base">{category.title}</span>

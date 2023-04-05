@@ -6,7 +6,7 @@
 		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
-		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+		"format": "prettier --ignore-path .prettierignore --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
 		"@fontsource/dm-sans": "^4.5.9",
