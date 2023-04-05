@@ -1,4 +1,6 @@
 <script>
+	import { storage } from 'svelte-legos';
+	import { writable } from 'svelte/store';
 	import { toggleAll } from '$lib/components/store';
 
 	import LucideSun from '~icons/lucide/sun';
@@ -6,15 +8,15 @@
 	import LucideChevronsUpDown from '~icons/lucide/chevrons-up-down';
 	import LucideChevronsDownUp from '~icons/lucide/chevrons-down-up';
 
-	let theme = 'light';
+	const theme = storage(writable(false), 'theme');
 
 	function themeToggle() {
-		if (theme != 'dark') {
+		if ($theme) {
 			document.documentElement.classList.add('dark');
-			theme = 'dark';
+			$theme = false;
 		} else {
 			document.documentElement.classList.remove('dark');
-			theme = 'light';
+			$theme = true;
 		}
 	}
 
@@ -27,7 +29,7 @@
 	<h1 class="flex-1 text-sm font-bold uppercase">D&D 5e - Справочник на русском языке</h1>
 
 	<button class="flex cursor-pointer" on:click={() => disclosureToggle()}>
-		{#if $toggleAll === false}
+		{#if $toggleAll}
 			<LucideChevronsUpDown class="h-6 w-6" />
 		{:else}
 			<LucideChevronsDownUp class="h-6 w-6" />
@@ -35,10 +37,10 @@
 	</button>
 
 	<button class="flex cursor-pointer" on:click={() => themeToggle()}>
-		{#if theme === 'dark'}
-			<LucideSun class="h-6 w-6 text-yellow-400 " />
-		{:else}
+		{#if $theme}
 			<LucideMoon class="h-6 w-6 text-slate-700" />
+		{:else}
+			<LucideSun class="h-6 w-6 text-slate-100 " />
 		{/if}
 	</button>
 </div>

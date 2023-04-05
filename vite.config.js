@@ -14,7 +14,7 @@ const config = {
 		AutoImport({
 			resolvers: [
 				IconsResolver({
-					prefix: false,
+					prefix: 'Icon',
 					extension: 'svelte',
 					enabledCollections: ['game-icons']
 				})
