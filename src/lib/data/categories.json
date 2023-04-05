@@ -1,85 +1,85 @@
 [
 	{
-		"dataset": "/src/lib/data/movement.json",
+		"dataset": "/src/lib/data/ps/movement.json",
 		"title": "Движение",
 		"subtitle": "ограничено скоростью",
 		"color": "g-stone"
 	},
 	{
-		"dataset": "/src/lib/data/action.json",
+		"dataset": "/src/lib/data/ps/action.json",
 		"title": "Действия",
 		"subtitle": "1 за ход",
 		"color": "g-red"
 	},
 	{
-		"dataset": "/src/lib/data/bonusaction.json",
+		"dataset": "/src/lib/data/ps/bonusaction.json",
 		"title": "Бонусные действия",
 		"subtitle": "максимум 1 за ход",
 		"color": "g-orange"
 	},
 	{
-		"dataset": "/src/lib/data/reaction.json",
+		"dataset": "/src/lib/data/ps/reaction.json",
 		"title": "Реакции",
 		"subtitle": "1 до вашего следующего хода",
 		"color": "g-amber"
 	},
 	{
-		"dataset": "/src/lib/data/freeaction.json",
+		"dataset": "/src/lib/data/ps/freeaction.json",
 		"title": "Свободные действия",
 		"color": "g-yellow"
 	},
 	{
-		"dataset": "/src/lib/data/condition.json",
+		"dataset": "/src/lib/data/ps/condition.json",
 		"title": "Состояния",
 		"color": "g-lime"
 	},
 	{
-		"dataset": "/src/lib/data/environment.json",
+		"dataset": "/src/lib/data/ps/environment.json",
 		"title": "Окружающая среда и восприятие",
 		"color": "g-green"
 	},
 	{
-		"dataset": "/src/lib/data/hitpoint.json",
+		"dataset": "/src/lib/data/ps/hitpoint.json",
 		"title": "Хиты, смерть и отдых",
 		"color": "g-emerald"
 	},
 	{
-		"dataset": "/src/lib/data/damage.json",
+		"dataset": "/src/lib/data/ps/damage.json",
 		"title": "Урон и атака",
 		"color": "g-teal"
 	},
 	{
-		"dataset": "/src/lib/data/abilityscore.json",
+		"dataset": "/src/lib/data/ps/abilityscore.json",
 		"title": "Характеристики и навыки",
 		"color": "g-cyan"
 	},
 	{
-		"dataset": "/src/lib/data/equipment.json",
+		"dataset": "/src/lib/data/ps/equipment.json",
 		"title": "Инструменты и оружие",
 		"color": "g-sky"
 	},
 	{
-		"dataset": "/src/lib/data/spellcasting.json",
+		"dataset": "/src/lib/data/ps/spellcasting.json",
 		"title": "Заклинания",
 		"color": "g-blue"
 	},
 	{
-		"dataset": "/src/lib/data/travel.json",
+		"dataset": "/src/lib/data/ps/travel.json",
 		"title": "Путешествие",
 		"color": "g-indigo"
 	},
 	{
-		"dataset": "/src/lib/data/multiclassing.json",
+		"dataset": "/src/lib/data/ps/multiclassing.json",
 		"title": "Мультиклассирование",
 		"color": "g-violet"
 	},
 	{
-		"dataset": "/src/lib/data/language.json",
+		"dataset": "/src/lib/data/ps/language.json",
 		"title": "Языки",
 		"color": "g-purple"
 	},
 	{
-		"dataset": "/src/lib/data/xp.json",
+		"dataset": "/src/lib/data/ps/xp.json",
 		"title": "Опыт",
 		"color": "g-fuchsia"
 	}

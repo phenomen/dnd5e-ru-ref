@@ -1,22 +1,17 @@
 <script lang="ts">
+	import type { CategoryType, DatasetsType } from '$lib/types';
 	import type { PageData } from './$types';
+
 	import Transition from 'svelte-transition';
 	import { createDialog } from 'svelte-headlessui';
 	import Category from '$lib/components/Category.svelte';
-	import categoriesData from '$lib/data/category.json';
-
-	type Category = {
-		dataset: string;
-		title: string;
-		subtitle?: string;
-		color: string;
-	};
+	import categoriesData from '$lib/data/categories.json';
 
 	export let data: PageData;
 
-	const dataset: any = data.data;
+	const datasets: DatasetsType = data.psData;
 
-	const categories: Category[] = categoriesData;
+	const categories: CategoryType[] = categoriesData;
 
 	const dialog = createDialog({ label: '', expanded: false });
 
@@ -35,7 +30,7 @@
 </script>
 
 {#each categories as category}
-	<Category {category} dataset={dataset[category.dataset]} on:message={showModal} />
+	<Category {category} dataset={datasets[category.dataset]} on:message={showModal} />
 {/each}
 
 <div class="relative z-10">

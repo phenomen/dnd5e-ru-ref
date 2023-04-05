@@ -1,13 +1,13 @@
+import type { PageLoad } from './$types';
+import type { DatasetsType } from '$lib/types';
+
 export const prerender = true;
 
-/** @type {import('./$types').PageLoad} */
-export function load() {
-	const data = import.meta.glob('$lib/data/*.json', {
+export const load = (async () => {
+	const psData: DatasetsType = import.meta.glob('$lib/data/ps/*.json', {
 		import: 'default',
 		eager: true
 	});
 
-	return {
-		data
-	}
-}
+	return { psData };
+}) satisfies PageLoad;

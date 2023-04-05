@@ -1,35 +1,15 @@
 <script lang="ts">
-	import RuleIcon from '$lib/components/RuleIcon.svelte';
+	import type { CategoryType, DatasetType } from '$lib/types';
 
 	import { toggleAll } from '$lib/components/store';
 	import { createEventDispatcher } from 'svelte';
 	import { createDisclosure } from 'svelte-headlessui';
+	import RuleIcon from '$lib/components/RuleIcon.svelte';
 
 	import LucideChevronRight from '~icons/lucide/chevron-right';
 
-	type Category = {
-		dataset: string;
-		title: string;
-		subtitle?: string;
-		color: string;
-	};
-
-	type Dataset = {
-		title: string;
-		subtitle?: string;
-		rules: Rule[];
-	};
-
-	type Rule = {
-		title: string;
-		subtitle: string;
-		icon: string;
-		reference: string;
-		description: string;
-	};
-
-	export let category: Category;
-	export let dataset: Dataset[];
+	export let category: CategoryType;
+	export let dataset: DatasetType[];
 
 	const dispatch = createEventDispatcher();
 	const categoryDisclosure = createDisclosure({ label: category.title, expanded: false });
