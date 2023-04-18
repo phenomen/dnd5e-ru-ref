@@ -41,7 +41,7 @@ ul {
 }
 
 .g-stone {
-	@apply border-stone-600 text-stone-600 hover:border-stone-700;
+	@apply border-stone-500 text-stone-500 hover:border-stone-600;
 }
 
 .g-red {
