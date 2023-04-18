@@ -2,7 +2,7 @@
 	import LucideCode2 from '~icons/lucide/code-2';
 </script>
 
-<div class="mt-20 items-center text-xs text-slate-400">
+<div class="mt-20 items-center text-xs text-stone-400">
 	<a
 		href="https://github.com/phenomen/dnd5e-ru-ref"
 		target="_blank"

@@ -24,7 +24,7 @@
 	});
 </script>
 
-<div class="my-4 flex items-center space-x-2 dark:text-slate-100 sm:space-x-4">
+<div class="my-4 flex items-center space-x-2 dark:text-stone-100 sm:space-x-4">
 	<h1 class="flex-1 text-sm font-bold uppercase">D&D 5e - Справочник на русском языке</h1>
 
 	<button class="flex cursor-pointer" on:click={() => ($toggleAll = !$toggleAll)}>
@@ -37,9 +37,9 @@
 
 	<button class="flex cursor-pointer" on:click={() => (($theme = !$theme), setTheme($theme))}>
 		{#if $theme}
-			<LucideMoon class="h-6 w-6 text-slate-100" />
+			<LucideMoon class="h-6 w-6 text-stone-100" />
 		{:else}
-			<LucideSun class="h-6 w-6 text-slate-700 " />
+			<LucideSun class="h-6 w-6 text-stone-700 " />
 		{/if}
 	</button>
 </div>

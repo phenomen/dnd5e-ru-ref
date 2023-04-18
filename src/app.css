@@ -11,7 +11,7 @@ h4 {
 }
 
 blockquote {
-	@apply flex w-full rounded bg-slate-100 p-2 font-serif text-slate-700 dark:bg-slate-800 dark:text-slate-100;
+	@apply flex w-full rounded bg-stone-100 p-2 font-serif text-stone-700 dark:bg-stone-800 dark:text-stone-100;
 }
 
 table {
@@ -19,7 +19,7 @@ table {
 }
 
 thead {
-	@apply border-slate-100 dark:bg-slate-700;
+	@apply border-stone-100 dark:bg-stone-700;
 }
 
 th {
@@ -27,7 +27,7 @@ th {
 }
 
 td {
-	@apply border-t border-slate-200 px-6 py-3 text-sm dark:border-slate-700;
+	@apply border-t border-stone-200 px-6 py-3 text-sm dark:border-stone-700;
 }
 
 ul {
@@ -37,7 +37,7 @@ ul {
 /* GRADIENTS */
 
 .g-slate {
-	@apply border-slate-600 text-slate-600 hover:border-slate-700;
+	@apply border-stone-600 text-stone-600 hover:border-stone-700;
 }
 
 .g-stone {

@@ -36,7 +36,7 @@
 <div class="relative z-10">
 	<Transition show={$dialog.expanded}>
 		<div
-			class="fixed inset-0 bg-black bg-opacity-25"
+			class="fixed inset-0 bg-black bg-opacity-80"
 			on:click={dialog.close}
 			on:keypress={dialog.close}
 		/>
@@ -45,32 +45,32 @@
 			<div class="flex min-h-full items-center justify-center p-2 text-center">
 				<Transition enter="ease-out duration-200" enterFrom="opacity-0" enterTo="opacity-100">
 					<div
-						class="w-full max-w-2xl transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all dark:bg-slate-800"
+						class="w-full max-w-2xl transform overflow-hidden rounded-md bg-white p-4 text-left align-middle shadow-xl transition-all dark:bg-stone-800"
 						use:dialog.modal
 					>
 						<div class="flex flex-col md:flex-row md:space-x-2">
 							<input hidden />
-							<h2 class="text-lg font-medium dark:text-slate-100">
+							<h2 class="text-lg font-medium dark:text-stone-100">
 								{dialogTitle}
 							</h2>
 							<span
-								class="inline-flex items-center rounded bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-800 dark:bg-slate-700 dark:text-slate-100"
+								class="inline-flex items-center rounded bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-800 dark:bg-stone-700 dark:text-stone-100"
 								>{dialogReference}</span
 							>
 						</div>
 
 						{#if dialogSubtitle}
-							<span class="my-2 text-sm text-slate-600 dark:text-slate-300">{dialogSubtitle}</span>
+							<span class="my-2 text-sm text-stone-600 dark:text-stone-300">{dialogSubtitle}</span>
 						{/if}
 
-						<div class="mt-4 text-sm dark:text-slate-100 md:text-base">
+						<div class="mt-4 text-sm dark:text-stone-100 md:text-base">
 							{@html dialogDescription}
 						</div>
 
 						<div class="mt-4">
 							<button
 								type="button"
-								class="inline-flex w-full justify-center rounded-md border border-transparent bg-slate-200 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
+								class="inline-flex w-full justify-center rounded-md border border-transparent bg-stone-200 px-4 py-2 text-sm font-medium text-stone-900 hover:bg-stone-300 dark:bg-stone-700 dark:text-stone-100 dark:hover:bg-stone-600"
 								on:click={dialog.close}
 								>Закрыть
 							</button>

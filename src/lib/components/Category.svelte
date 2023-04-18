@@ -29,16 +29,16 @@
 <div class="my-1 md:my-2">
 	<button
 		use:categoryDisclosure.button
-		class="{category.color} flex w-full items-center rounded border-2 bg-white p-2 text-left dark:bg-slate-900 md:p-4"
+		class="{category.color} flex w-full items-center rounded border-2 bg-white p-2 text-left dark:bg-stone-900 md:p-4"
 	>
-		<div class="flex-1 items-center text-slate-900 dark:text-slate-100">
+		<div class="flex-1 items-center text-stone-900 dark:text-stone-100">
 			<span class="mr-2 text-sm font-medium md:text-base">{category.title}</span>
 			{#if category.subtitle}
 				<span class="border-l-2 px-2 text-xs md:text-sm">{category.subtitle}</span>
 			{/if}
 		</div>
 		<LucideChevronRight
-			class="h-5 w-5 dark:text-slate-100 {$categoryDisclosure.expanded
+			class="h-5 w-5 dark:text-stone-100 {$categoryDisclosure.expanded
 				? 'rotate-90 transform'
 				: ''}"
 		/>
@@ -47,16 +47,16 @@
 	{#if $categoryDisclosure.expanded}
 		<div use:categoryDisclosure.panel>
 			{#each dataset as item}
-				<h2 class="mt-4 text-lg font-semibold dark:text-slate-100">
+				<h2 class="mt-4 text-lg font-semibold dark:text-stone-100">
 					{item.title}
 				</h2>
-				<p class="mt-0 max-w-4xl pt-0 text-sm dark:text-slate-100 md:text-base">
+				<p class="mt-0 max-w-4xl pt-0 text-sm dark:text-stone-100 md:text-base">
 					{item.subtitle}
 				</p>
-				<div class="grid grid-cols-1 gap-2 dark:text-slate-100 md:grid-cols-2 lg:grid-cols-3">
+				<div class="grid grid-cols-1 gap-2 dark:text-stone-100 md:grid-cols-2 lg:grid-cols-3">
 					{#each item.rules as rule}
 						<button
-							class="flex rounded bg-white fill-white p-2 text-left shadow hover:cursor-pointer hover:bg-slate-100 dark:bg-slate-800 hover:dark:bg-slate-700"
+							class="flex rounded bg-white fill-white p-2 text-left shadow hover:cursor-pointer hover:bg-stone-100 dark:bg-stone-800 hover:dark:bg-stone-700"
 							on:click={() => sendItem(rule.title, rule.subtitle, rule.description, rule.reference)}
 						>
 							<div class="mr-2 flex-shrink-0 {category.color} rounded border-2">
